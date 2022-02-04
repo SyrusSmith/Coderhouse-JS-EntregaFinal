@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mean Machine eCommerce</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <!-- INICIO HEADER -->
+    <header class="grid-header">
+        <!-- inicio menu INDEX -->
+        <nav class="NAVBAR">
+            <!-- LOGO -->
+            <div class="NAVBAR__LOGO">
+                <a href="./index.html">
+                    <img class="logo" src="./media/LogoMeanMachine.png" alt="Logo Mean Machine Web">
+                </a>
+            </div>
+            <!-- FIN LOGO -->
+
+            <!-- TOGGLE -->
+            <input type="checkbox" class="NAVBAR__CHECKBOX" id="NAVBAR__CHECKBOX">
+            <label for="NAVBAR__CHECKBOX" class="NAVBAR__TOGGLE">
+                <svg class="iconMenu"></svg>
+                <svg class="iconClose"></svg>
+            </label>
+            <!-- FIN TOGGLE -->
+
+            <!-- INICIO MENU -->
+            <ul class="menu">
+                <li class="botonesMenu">
+                    <a href="#">INICIO</a>
+                </li>
+                <li class="botonesMenu">
+                    <a href="#">NOTICIAS</a>
+                </li>
+                <li class="botonesMenu">
+                    <a href="#">REVIEWS</a>
+                </li>
+                <li class="botonesMenu">
+                    <a href="#">NOSOTROS</a>
+                </li>
+                <li class="botonesMenu">
+                    <a href="#">UNÍTENOS</a>
+                </li>
+                <li class="botonesMenu paginaActiva">
+                    <a href="./tienda.html">TIENDA</a>
+                </li>
+                <li class="botonesMenu">
+                    <a href="./pages/carrito.html" id="carritoDisplay">
+                        <img src="./media/icons/Carrito.svg" alt="Ícono Carrito de Compras">
+                    </a>
+                </li>
+                <!-- <li class="searchBox">
+                    <input type="search" placeholder="Buscar">
+                </li> -->
+            </ul>
+        </nav>
+        <!-- FIN MENU -->
+    </header>
+    <!-- FIN HEADER -->
+
+    <!-- INICIO MAIN -->
+    <main>
+        <section id="listaProductos" class="PRODUCTOS" category="todos">
+            <!-- ACÁ Productos del eCommerce -->
+        </section>
+        <section id="cargarProductos" class="cargarProductos"></section>
+        <aside class="FILTROS">
+            <!-- Filtros de búsqueda -->
+            <ul>
+                <span>FILTROS</span>
+                <li>
+                    <button class="FILTROS__BTN" category="todos">
+                        <p>Todos</p>
+                    </button>
+                </li>
+                <li>
+                    <button class="FILTROS__BTN" category="SSD">
+                        <p>Discos SSD</p>
+                    </button>
+                </li>
+                <li>
+                    <button class="FILTROS__BTN" category="Fuente de Alimentación">
+                        <p>Fuentes de Alimentación</p>
+                    </button>
+                </li>
+                <li>
+                    <button class="FILTROS__BTN" category="Gabinete">
+                        <p>Gabinetes</p>
+                    </button>
+                </li>
+                <li>
+                    <button class="FILTROS__BTN" category="Memoria Ram">
+                        <p>Memorias Ram</p>
+                    </button>
+                </li>
+                <li>
+                    <button class="FILTROS__BTN" category="Monitor">
+                        <p>Monitores</p>
+                    </button>
+                </li>
+                <li>
+                    <button class="FILTROS__BTN" category="Motherboard">
+                        <p>Mothers</p>
+                    </button>
+                </li>
+                <li>
+                    <button class="FILTROS__BTN" category="Periféricos">
+                        <p>Periféricos</p>
+                    </button>
+                </li>
+                <li>
+                    <button class="FILTROS__BTN" category="Placa de Video">
+                        <p>Placas de Video</p>
+                    </button>
+                </li>
+                <li>
+                    <button class="FILTROS__BTN" category="Procesador">
+                        <p>Procesadores</p>
+                    </button>
+                </li>
+                <li>
+                    <button class="FILTROS__BTN" category="Refrigeración Líquida">
+                        <p>Refrigeraciones</p>
+                    </button>
+                </li>
+            </ul>
+        </aside>
+    </main>
+    <!-- FIN MAIN -->
+
+    <!-- INICIO FOOTER -->
+    <footer>
+        <!-- ACÁ Redes y contacto -->
+        <section class="CONTACTO">
+            <!-- Formulario de contacto -->
+            <form action="/" method="/" id="newsletterForm" enctype="application/x-www-form-urlencoded" name="formulario suscripción">
+                <h3 class="CONTACTO__H3">Enterate siempre antes que el resto</h3>
+                <h3 class="CONTACTO__H3">¡UNITE a nuestro newsletter!</h3>
+                <!-- Input Nombre -->
+                <div class="CONTACTO__FORM__INPUT">
+                    <input type="text" name="Nombre" placeholder="Ingresá tu nombre" id="newsletterName">
+                    <!-- Si hay un error en el nombre, lo muestro acá -->
+                    <div class="CONTACTO__FORM__ERROR" id="errorNewsletterName"></div>
+                </div>
+                
+                <!-- Input Email -->
+                <div class="CONTACTO__FORM__INPUT">
+                    <input type="email" name="Email" id="newsletterEmail" placeholder="Ingresá tu email">
+                    <!-- Si hay un error con el email, lo muestro acá -->
+                    <div class="CONTACTO__FORM__ERROR" id="errorNewsletterEmail"></div>
+                </div>
+                
+                <button class="CONTACTO__FORM__BOTON" type="submit">Suscribirse</button>
+            </form>
+            <!-- Acá muestro si el formulario se envió correctamente -->
+            <article class="CONTACTO__ENVIADO" id="resultForm">
+            </article>
+        </section>
+        <section class="REDES">
+            <!-- Links a Redes -->
+        </section>
+    </footer>
+    <!-- FIN FOOTER -->
+    
+    <!-- SCRIPTS JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/main-EntregaFinal-DiBiase.js"></script>
+    <!-- <script src="./js/carrito-EntregaFinal-DiBiase.js"></script> -->
+    <script src="./js/formulario-EntregaFinal-DiBiase.js"></script>
+</body>
+</html>

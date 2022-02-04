@@ -1,0 +1,234 @@
+/* --> INICIO CSS FOOTER <-- */
+
+footer {
+    background-color: rgb(204, 204, 204);
+    bottom: 0; /* Para que el footer quede pegado abajo */
+    display: grid;
+    height: 30rem;
+    justify-content: center;
+    position: relative; /* Para que el footer quede pegado abajo */
+    width: 100%;
+}
+
+.CONTACTO {
+    height: 22.5rem;
+    padding: $spacing-xl 0;
+    width: 35rem;
+    &__H3 {
+        font-size: $spacing-xl;
+    }
+    // CLASES FORM
+    &__FORM {
+        &__INPUT {
+            padding: $spacing-md 0;
+        }
+        &__INPUT > input {
+            // border: .2rem solid $secondary;
+            border-radius: .35rem;
+            height: 3rem;
+            padding-left: $spacing-md;
+            width: 35rem;
+        }
+        &__BOTON{
+            background-color: rgba(51, 125, 255, 0.5);
+            border: 0.2rem solid $primary;
+            border-radius: .5rem;
+            border: 0.2rem solid $primary;
+            color: $white;
+            cursor: pointer;
+            font-size: $font-xl;
+            font-weight: bolder;
+            padding: $spacing-sm;
+            transition: all 0.25s ease-in-out;
+            width: 20rem;
+        }
+        &__BOTON:hover{
+            background-color: $primary;
+            border-radius: 1rem;
+            box-shadow: 0 .15rem 0 rgb(200, 200, 200),
+                        0 .45rem 0 rgb(150, 150, 150);
+            color: $white;
+            translate: 0 -0.1rem;
+        }
+        &__ERROR {
+            color: red;
+            font-size: $font-lg;
+            font-style: italic;
+            font-weight: bold;
+            margin: 0.5rem 0 0;
+
+            &__FOCUS{
+                border: solid .2rem red;
+                box-shadow: 0rem 0rem 0.5rem 0.3rem rgba(255, 151, 151, 1);
+            }
+        }
+        &__OK {
+            color: rgba(0, 255, 0, 0.8);
+            font-size: $font-lg;
+            font-style: italic;
+            font-weight: bold;
+            margin: 0.5rem 0 0;
+
+            &__FOCUS{
+                border: solid .2rem rgb(0, 255, 0);
+                box-shadow: 0rem 0rem 0.5rem 0.3rem rgba(255, 151, 151, 1);
+            }
+        }
+    }
+
+    &__ENVIADO {
+        margin-top: -13.5rem;
+
+        &__MOSTRAR {
+            background-color: rgb(230, 230, 230);
+            border: .15rem solid rgb(0, 55, 255);
+            border-radius: .35rem;
+            box-shadow: 0.25rem 0.5rem 1rem 0.2rem rgba(0, 90, 255, 0.5); //0rem 0rem 1rem 0.2rem rgba(0, 255, 0, 0.8);
+            color: rgb(0, 50, 0);
+            display: none;
+            font-size: $font-xxl;
+            font-weight: bold;
+            height: 14rem;
+            padding: 3.5rem $spacing-md;
+            position: relative;
+            text-align: center;
+        }
+    }
+}
+
+// .footerLogo {
+//     max-height: 10rem;
+//     padding: $spacing-xl 0rem;
+// }
+
+// .footerSocial {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     margin: $spacing-xl;
+
+//     a {
+//         align-items: center;
+//         display: flex;
+//         padding: $spacing-lg;
+//     }
+
+//     @each $social in Instagram, Youtube, Facebook, Mail {
+//         .footerIcono#{$social} {
+//             background-color: rgb(180, 180, 180);
+//             background-image: url("../media/icons/#{$social}-gris.svg");
+//             border-radius: 0.5rem;
+//             height: 30px;
+//             width: 30px;
+//             overflow: hidden;
+//         }
+//     }
+// }
+
+// .footerEtiquetaSocial {
+//     color: rgb(80,80,80);
+//     font-size: $font-lg;
+//     font-weight: 700;
+//     padding: $spacing-sm;
+// }
+
+// @keyframes bump {
+//     33% {
+//         transform: scale(1.8);
+//     }
+//     66% {
+//         transform: scale(0.8);
+//     }
+//     100% {
+//         transform: scale(1);
+//     }
+    
+// }
+
+// .footerSocial:hover {
+//     background-color: rgba(0, 110, 255, 0.3);
+//     transform: scale(1.1);
+
+//     @each $socialHover in Instagram, Youtube, Facebook, Mail {
+//         .footerIcono#{$socialHover} {
+//             animation: bump 0.5s ease-in-out;
+//             background-image: url("../media/icons/#{$socialHover}.svg");
+//             overflow: hidden;
+//         }
+//     }
+
+//     .footerEtiquetaSocial {
+//         color: white;
+//     }
+// }
+// /* --> FIN CSS FOOTER <-- */
+
+// /* INICIO MEDIAS FOOTER */
+// @media only screen and (max-width: 1024px) {
+
+//     .grid-footer {
+//         align-items: center;        
+//         column-gap: 0rem;
+//         display: grid;
+//         grid-area: grid-footer;
+//         grid-template-areas: 
+//         "grid-footer-logo grid-footer-instagram grid-footer-youtube"
+//         "grid-footer-logo grid-footer-facebook grid-footer-email";
+//         justify-content: center;
+//         padding: $spacing-xl;
+//         position: relative;
+//     }
+    
+//     .grid-footer-logo {
+//         display: grid;
+//         grid-area: grid-footer-logo;
+//     }
+    
+//     .grid-footer-instagram {
+//         display: grid;
+//         grid-area: grid-footer-instagram;
+//     }
+    
+//     .grid-footer-youtube {
+//         display: grid;
+//         grid-area: grid-footer-youtube;
+//     }
+    
+//     .grid-footer-facebook {
+//         display: grid;
+//         grid-area: grid-footer-facebook;
+//     }
+    
+//     .grid-footer-email {
+//         display: grid;
+//         grid-area: grid-footer-email;
+//     }
+
+//     .footerSocial {
+//         margin: 0rem;
+//     }
+// }
+
+// @media only screen and (max-width: 600px) {
+
+//     .grid-footer {
+//         align-items: center;        
+//         column-gap: $spacing-xl;
+//         display: grid;
+//         grid-area: grid-footer;
+//         grid-template-areas: 
+//         "grid-footer-logo"
+//         "grid-footer-instagram"
+//         "grid-footer-youtube"
+//         "grid-footer-facebook"
+//         "grid-footer-email";
+//         justify-content: center;
+//         padding-bottom: $spacing-xl;
+//         width: 100%;
+//     }
+
+//     .footerSocial {
+//         margin: 0rem;
+//     }
+// }
+// /* FIN MEDIAS FOOTER */

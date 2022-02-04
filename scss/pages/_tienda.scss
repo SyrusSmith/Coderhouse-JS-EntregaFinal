@@ -1,0 +1,223 @@
+/* INICIO CLASES TIENDA */
+
+main {
+    display: grid;
+    grid-template-areas: 
+    'productos productos productos productos filtros'
+    'cargarProductos cargarProductos cargarProductos cargarProductos cargarProductos';
+    justify-content: center;
+    margin-top: 20rem;
+    max-width: 1280rem;
+    padding-bottom: 8rem;
+}
+
+// Panel de filtros
+.FILTROS {
+    background-color: rgba(149, 186, 255, 0.25);
+    border: solid .15rem $primary;
+    border-radius: 1rem;
+    grid-area: filtros;
+    height: 100vh;
+    margin-left: 2rem;
+    padding: 2rem 1rem 0;
+    width: 15rem;
+
+    span {
+        border-bottom: solid .1rem rgb(0, 29, 77);
+        color: $primary;
+        display: inline-block;
+        font-size: 1.7rem;
+        font-weight: 900;
+        letter-spacing: .25rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        width: 100%;
+    }
+    
+    // li {
+    //     padding-top: 1rem;
+
+    //     input {
+    //         border: .1rem solid rgb(0, 29, 77);
+    //     }
+
+    //     label {
+    //         color: rgb(100, 100, 100);
+    //         font-size: 1.2rem;
+    //         font-weight: 600;
+    //         padding-left: .35rem;
+    //     }        
+    // }
+
+    &__BTN {
+        background-color: rgb(0, 29, 77);
+        border: 0.15rem solid rgb(0, 29, 77);
+        border-radius: .5rem;
+        color: $white;
+        cursor: pointer;
+        display: inline-block;
+        font-size: $font-lg;
+        font-weight: 500;
+        height: 5rem;
+        letter-spacing: .05rem;
+        margin-top: 1rem;
+        padding: $spacing-sm;
+        text-align: center;
+        transition: all 0.25s ease-in;
+        width: 100%;
+
+        &:hover {
+            background-color: rgba(140, 180, 255, 0.25);
+            border: 0.25rem solid rgb(0, 29, 77);
+            border-radius: 1rem;
+            color: rgb(0, 29, 77);
+            font-weight: 700;
+            letter-spacing: .05rem;
+        }
+
+        // &-ACTIVE{
+        //     background-color: $secondary;
+        //     border: 0.15rem solid rgb(0, 29, 77);
+        //     border-radius: .5rem;
+        //     color: rgb(0, 29, 77);
+        //     cursor: pointer;
+        //     display: inline-block;
+        //     font-variant: small-caps;
+        //     font-size: $font-lg;
+        //     font-weight: 900;
+        //     height: 5rem;
+        //     letter-spacing: .1rem;
+        //     margin-top: 1rem;
+        //     padding: $spacing-sm;
+        //     text-align: center;
+        //     width: 100%;
+        // }
+    }
+}
+
+.ACTIVE{
+    background-color: rgb(230, 230, 230);
+    border: 0.15rem solid rgb(0, 29, 77);
+    border-radius: .5rem;
+    box-shadow: 0rem 0rem .35rem .2rem rgba(0, 98, 255, 0.25);
+    color: rgb(0, 29, 77);
+    cursor: pointer;
+    display: inline-block;
+    font-variant: small-caps;
+    font-size: $font-lg;
+    font-weight: 900;
+    height: 5rem;
+    letter-spacing: .1rem;
+    margin-top: 1rem;
+    padding: $spacing-sm;
+    text-align: center;
+    width: 100%;
+}
+
+.PRODUCTOS {
+    background-color: rgb(230, 230, 230);
+    border-radius: 1rem;
+    column-gap: $spacing-xl;
+    display: grid;
+    grid-area: productos;
+    grid-template-columns: auto auto auto auto;
+    // grid-template-rows: auto auto auto;
+    height: 100%;
+    justify-content: center;
+    // margin: 15rem 2rem 0;
+    max-width: 1280px;
+    padding: $spacing-xl*2;
+    row-gap: 4rem;
+    width: 100%;
+
+    &__ITEM {
+        background-color: rgb(220, 230, 255);
+        border-radius: .5rem;
+        box-shadow: 0rem 0rem .35rem .25rem rgba(140, 180, 255, 0.5);
+        display: flex;
+        flex-direction: column;
+        height: 42.5rem;
+        padding: $spacing-xl $spacing-lg;
+        width: 30rem;
+
+        &__BTN {
+            background-color: rgba(0, 29, 77, 0.9);
+            border: 0.25rem solid rgba(0, 29, 77, 0.9);
+            border-radius: .5rem;
+            color: $white;
+            cursor: pointer;
+            font-size: $font-xl;
+            font-weight: 500;
+            padding: $spacing-md;
+            transition: border-radius 0.35s ease-in-out;
+        }
+        &__BTN:hover{
+            background-color: $secondary;
+            border: 0.25rem solid rgb(0, 29, 77);
+            border-radius: 1rem;
+            color: rgb(0, 29, 77);
+            font-weight: 700;
+        }
+
+        &__IMG {
+            height: 100%;
+            max-width: 40rem;
+            // margin-bottom: $spacing-xl;
+            width: 100%;
+        }
+    }
+
+    &__ITEM > H3 {
+        color: rgb(20, 47, 94);
+        font-size: 1.8rem;
+        font-weight: 900;
+        height: 6.4rem;
+        padding-bottom: $spacing-sm;
+        padding-top: $spacing-lg;
+    }
+
+    &__ITEM > H4 {
+        color: rgb(44, 101, 199);
+        font-size: $font-lg;
+        padding-bottom: $spacing-md;
+    }
+
+    &__ITEM > Span {
+        color: rgb(51, 125, 255);
+        font-size: $font-xxl;
+        font-weight: 900;
+        padding: $spacing-sm;
+        text-align: end;
+    }
+}
+
+.cargarProductos {
+    // background-color: rgb(230, 230, 230);
+    display: grid;
+    grid-area: cargarProductos;
+    height: 8.2rem;
+    justify-content: center;
+    // margin: 8rem 2rem 0;
+    max-width: 1280px;
+    width: 100%;
+
+    &__BTN-Load{
+        background-color: $secondary;
+        border: 0.25rem solid rgba(0, 29, 77, 0.5);
+        border-radius: .25rem;
+        color: rgb(0, 29, 77);
+        cursor: pointer;
+        font-size: $font-lg;
+        font-weight: bold;
+        margin: $spacing-xl 0;
+        padding: $spacing-md;
+    }
+
+    &__BTN-Load:hover {
+        background-color: rgb(140, 180, 255);
+        border: 0.25rem solid rgb(0, 29, 77);
+        color: rgb(0, 29, 77);
+    }
+}
+
+/* FIN CLASES TIENDA */

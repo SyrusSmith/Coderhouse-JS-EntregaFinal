@@ -1,0 +1,525 @@
+@charset "UTF-8";
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+/* VARIABLES */
+/* FONTS SIZE */
+/* SPACINGS */
+/* COLORS */
+/* GLOBALS */
+/* --> INICIO CSS NORMALIZE <-- */
+* {
+  box-sizing: border-box;
+  font-family: 'Lato' !important;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%;
+  /*62.5% Para que el tamaño de la fuente base sea 10px*/
+  height: 100%;
+  text-decoration: none; }
+
+body {
+  background-color: #f5f5f5;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  min-width: 100%;
+  width: 100%; }
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0rem; }
+
+ol, ul {
+  padding-left: 0rem; }
+
+li {
+  list-style: none; }
+
+h1 {
+  display: none; }
+
+a {
+  color: gainsboro;
+  text-decoration: none; }
+
+a:hover {
+  color: gainsboro; }
+
+p {
+  margin: 0; }
+
+main {
+  display: grid;
+  justify-content: center; }
+
+button {
+  border: none;
+  text-decoration: none; }
+
+input {
+  border: none; }
+
+table thead tbody tr th td {
+  border: none;
+  border-style: none;
+  border-collapse: collapse; }
+
+thead > tr > th {
+  height: 1rem; }
+
+td {
+  text-align: center; }
+
+/* --> FIN CSS NORMALIZE <-- */
+/* INICIO MEDIAS NORMALIZE */
+/* FIN MEDIAS NORMALIZE */
+/* PARTIALS */
+/* --> INICIO CSS HEADER <--- */
+header {
+  display: flex;
+  width: 100%;
+  z-index: 1000; }
+
+.NAVBAR {
+  align-items: center;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  background-color: rgba(0, 29, 77, 0.9);
+  box-shadow: 0rem 0.25rem 0.5rem rgba(0, 9, 37, 0.8);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%; }
+  .NAVBAR__LOGO .logo {
+    /* LOGO HEADER */
+    max-height: 12rem;
+    padding: 2rem 0rem;
+    animation-name: logoRotate;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+    animation-iteration-count: infinite; }
+  .NAVBAR__CHECKBOX {
+    display: none; }
+  .NAVBAR__TOGGLE {
+    display: none; }
+    .NAVBAR__TOGGLE svg {
+      color: white;
+      height: 30px;
+      width: 30px; }
+    .NAVBAR__TOGGLE .iconMenu {
+      background-image: url("../media/icons/hamburguerIcon.svg"); }
+    .NAVBAR__TOGGLE .iconClose {
+      background-image: url("../media/icons/closeIcon.svg"); }
+
+@keyframes logoRotate {
+  0% {
+    transform: rotateY(0deg);
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    transform: rotateY(360deg);
+    opacity: 1; } }
+
+/* CLASES MENU */
+.menu {
+  display: flex;
+  font-size: 1.5em;
+  font-weight: 900;
+  margin-bottom: 0rem; }
+  .menu .botonesMenu {
+    padding: 0.5rem 1rem; }
+  .menu .botonesMenu:hover {
+    background-color: #337dff; }
+    .menu .botonesMenu:hover > a {
+      color: #f5f5f5; }
+
+.paginaActiva > a {
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 900; }
+
+ul > .paginaActiva {
+  background-color: #b4b4b4;
+  box-shadow: inset 0rem 0rem 0.35rem #282828; }
+
+/* ÍCONO CARRITO MENÚ */
+li > a > img {
+  height: 2rem; }
+
+/* CONTADOR CARRITO */
+.contadorCarrito {
+  background-color: #ff6565;
+  border: 0.1rem solid #ff6565;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  font-variant-position: super;
+  margin-left: 1.45rem;
+  margin-top: -3rem;
+  height: 1.5rem;
+  position: relative;
+  width: 1.5rem;
+  z-index: 1000; }
+
+/* --> FIN CSS HEADER <-- */
+/* INICIO MEDIAS HEADER */
+@media only screen and (max-width: 1024px) {
+  .grid-header {
+    background-color: rgba(0, 29, 77, 0.9);
+    display: grid;
+    grid-area: grid-header;
+    justify-items: center;
+    width: 100%; }
+  .NAVBAR {
+    background-color: rgba(0, 29, 77, 0.9);
+    display: grid;
+    justify-items: center; }
+  .menu {
+    display: flex;
+    flex-direction: row; } }
+
+@media only screen and (max-width: 767px) {
+  .NAVBAR {
+    display: grid;
+    /* PROPIEDADES PARA MOBILE */
+    justify-items: center;
+    width: 100vw;
+    /* FUNCIONALIDAD PARA QUE CUANDO CLICKEEN EL ICONO DEL MENU HAMBURGUESA SE DESPLIEGUE EL MENU*/ }
+    .NAVBAR__TOGGLE {
+      cursor: pointer;
+      display: flex;
+      margin: 6rem 3.5rem 0rem;
+      position: absolute;
+      right: 0; }
+      .NAVBAR__TOGGLE .iconClose {
+        display: none; }
+    .NAVBAR .menu {
+      display: none;
+      flex-direction: row;
+      padding-bottom: 0rem; }
+    .NAVBAR #NAVBAR__CHECKBOX:checked ~ .NAVBAR__TOGGLE {
+      margin: 3rem 3.5rem 0rem; }
+    .NAVBAR #NAVBAR__CHECKBOX:checked ~ .NAVBAR__TOGGLE .iconMenu {
+      display: none; }
+    .NAVBAR #NAVBAR__CHECKBOX:checked ~ .NAVBAR__TOGGLE .iconClose {
+      display: flex; }
+    .NAVBAR #NAVBAR__CHECKBOX:checked ~ .menu {
+      display: flex; } }
+
+@media only screen and (max-width: 600px) {
+  .NAVBAR {
+    display: grid;
+    /* PROPIEDADES PARA MOBILE */
+    justify-items: center;
+    width: 100vw; }
+    .NAVBAR .menu {
+      display: none;
+      flex-direction: column;
+      padding-bottom: 1rem; }
+    .NAVBAR #NAVBAR__CHECKBOX:checked ~ .NAVBAR__TOGGLE {
+      margin: -10rem 3.5rem 0rem; } }
+
+/* FIN MEDIAS HEADER */
+/* --> INICIO CSS FOOTER <-- */
+footer {
+  background-color: #cccccc;
+  bottom: 0;
+  /* Para que el footer quede pegado abajo */
+  display: grid;
+  height: 30rem;
+  justify-content: center;
+  position: relative;
+  /* Para que el footer quede pegado abajo */
+  width: 100%; }
+
+.CONTACTO {
+  height: 22.5rem;
+  padding: 2rem 0;
+  width: 35rem; }
+  .CONTACTO__H3 {
+    font-size: 2rem; }
+  .CONTACTO__FORM__INPUT {
+    padding: 1rem 0; }
+  .CONTACTO__FORM__INPUT > input {
+    border-radius: .35rem;
+    height: 3rem;
+    padding-left: 1rem;
+    width: 35rem; }
+  .CONTACTO__FORM__BOTON {
+    background-color: rgba(51, 125, 255, 0.5);
+    border: 0.2rem solid #337dff;
+    border-radius: .5rem;
+    border: 0.2rem solid #337dff;
+    color: white;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 0.5rem;
+    transition: all 0.25s ease-in-out;
+    width: 20rem; }
+  .CONTACTO__FORM__BOTON:hover {
+    background-color: #337dff;
+    border-radius: 1rem;
+    box-shadow: 0 0.15rem 0 #c8c8c8, 0 0.45rem 0 #969696;
+    color: white;
+    translate: 0 -0.1rem; }
+  .CONTACTO__FORM__ERROR {
+    color: red;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+    margin: 0.5rem 0 0; }
+    .CONTACTO__FORM__ERROR__FOCUS {
+      border: solid .2rem red;
+      box-shadow: 0rem 0rem 0.5rem 0.3rem #ff9797; }
+  .CONTACTO__FORM__OK {
+    color: rgba(0, 255, 0, 0.8);
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+    margin: 0.5rem 0 0; }
+    .CONTACTO__FORM__OK__FOCUS {
+      border: solid 0.2rem lime;
+      box-shadow: 0rem 0rem 0.5rem 0.3rem #ff9797; }
+  .CONTACTO__ENVIADO {
+    margin-top: -13.5rem; }
+    .CONTACTO__ENVIADO__MOSTRAR {
+      background-color: #e6e6e6;
+      border: 0.15rem solid #0037ff;
+      border-radius: .35rem;
+      box-shadow: 0.25rem 0.5rem 1rem 0.2rem rgba(0, 90, 255, 0.5);
+      color: #003200;
+      display: none;
+      font-size: 2.5rem;
+      font-weight: bold;
+      height: 14rem;
+      padding: 3.5rem 1rem;
+      position: relative;
+      text-align: center; }
+
+/* PAGES */
+/* INICIO CLASES TIENDA */
+main {
+  display: grid;
+  grid-template-areas: 'productos productos productos productos filtros' 'cargarProductos cargarProductos cargarProductos cargarProductos cargarProductos';
+  justify-content: center;
+  margin-top: 20rem;
+  max-width: 1280rem;
+  padding-bottom: 8rem; }
+
+.FILTROS {
+  background-color: rgba(149, 186, 255, 0.25);
+  border: solid 0.15rem #337dff;
+  border-radius: 1rem;
+  grid-area: filtros;
+  height: 100vh;
+  margin-left: 2rem;
+  padding: 2rem 1rem 0;
+  width: 15rem; }
+  .FILTROS span {
+    border-bottom: solid 0.1rem #001d4d;
+    color: #337dff;
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 900;
+    letter-spacing: .25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 100%; }
+  .FILTROS__BTN {
+    background-color: #001d4d;
+    border: 0.15rem solid #001d4d;
+    border-radius: .5rem;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    height: 5rem;
+    letter-spacing: .05rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    transition: all 0.25s ease-in;
+    width: 100%; }
+    .FILTROS__BTN:hover {
+      background-color: rgba(140, 180, 255, 0.25);
+      border: 0.25rem solid #001d4d;
+      border-radius: 1rem;
+      color: #001d4d;
+      font-weight: 700;
+      letter-spacing: .05rem; }
+
+.ACTIVE {
+  background-color: #e6e6e6;
+  border: 0.15rem solid #001d4d;
+  border-radius: .5rem;
+  box-shadow: 0rem 0rem 0.35rem 0.2rem rgba(0, 98, 255, 0.25);
+  color: #001d4d;
+  cursor: pointer;
+  display: inline-block;
+  font-variant: small-caps;
+  font-size: 1.5rem;
+  font-weight: 900;
+  height: 5rem;
+  letter-spacing: .1rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  width: 100%; }
+
+.PRODUCTOS {
+  background-color: #e6e6e6;
+  border-radius: 1rem;
+  column-gap: 2rem;
+  display: grid;
+  grid-area: productos;
+  grid-template-columns: auto auto auto auto;
+  height: 100%;
+  justify-content: center;
+  max-width: 1280px;
+  padding: 4rem;
+  row-gap: 4rem;
+  width: 100%; }
+  .PRODUCTOS__ITEM {
+    background-color: #dce6ff;
+    border-radius: .5rem;
+    box-shadow: 0rem 0rem 0.35rem 0.25rem rgba(140, 180, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    height: 42.5rem;
+    padding: 2rem 1.5rem;
+    width: 30rem; }
+    .PRODUCTOS__ITEM__BTN {
+      background-color: rgba(0, 29, 77, 0.9);
+      border: 0.25rem solid rgba(0, 29, 77, 0.9);
+      border-radius: .5rem;
+      color: white;
+      cursor: pointer;
+      font-size: 2rem;
+      font-weight: 500;
+      padding: 1rem;
+      transition: border-radius 0.35s ease-in-out; }
+    .PRODUCTOS__ITEM__BTN:hover {
+      background-color: #CCCCCC;
+      border: 0.25rem solid #001d4d;
+      border-radius: 1rem;
+      color: #001d4d;
+      font-weight: 700; }
+    .PRODUCTOS__ITEM__IMG {
+      height: 100%;
+      max-width: 40rem;
+      width: 100%; }
+  .PRODUCTOS__ITEM > H3 {
+    color: #142f5e;
+    font-size: 1.8rem;
+    font-weight: 900;
+    height: 6.4rem;
+    padding-bottom: 0.5rem;
+    padding-top: 1.5rem; }
+  .PRODUCTOS__ITEM > H4 {
+    color: #2c65c7;
+    font-size: 1.5rem;
+    padding-bottom: 1rem; }
+  .PRODUCTOS__ITEM > Span {
+    color: #337dff;
+    font-size: 2.5rem;
+    font-weight: 900;
+    padding: 0.5rem;
+    text-align: end; }
+
+.cargarProductos {
+  display: grid;
+  grid-area: cargarProductos;
+  height: 8.2rem;
+  justify-content: center;
+  max-width: 1280px;
+  width: 100%; }
+  .cargarProductos__BTN-Load {
+    background-color: #CCCCCC;
+    border: 0.25rem solid rgba(0, 29, 77, 0.5);
+    border-radius: .25rem;
+    color: #001d4d;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2rem 0;
+    padding: 1rem; }
+  .cargarProductos__BTN-Load:hover {
+    background-color: #8cb4ff;
+    border: 0.25rem solid #001d4d;
+    color: #001d4d; }
+
+/* FIN CLASES TIENDA */
+#carrito {
+  background-color: #e6e6e6;
+  border-radius: .5rem;
+  box-shadow: 0rem 0rem 1rem 0.25rem rgba(140, 180, 255, 0.5);
+  width: 1280px; }
+
+thead {
+  background-color: #337dff;
+  border-radius: .5rem; }
+
+tr {
+  height: 1rem; }
+
+tr:nth-child(even) {
+  background-color: rgba(140, 180, 255, 0.75); }
+  tr:nth-child(even) td {
+    color: white; }
+
+th {
+  color: white;
+  font-size: 2rem;
+  font-weight: 900; }
+
+td {
+  color: #337dff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0rem 1rem; }
+  td img {
+    width: 10rem; }
+
+.btnEliminarProducto, .btnVaciarCarrito {
+  background-color: #fc8989;
+  border-radius: .5rem;
+  color: #323232;
+  font-size: 1.5rem;
+  font-weight: 700;
+  height: 2.5rem;
+  letter-spacing: .15rem;
+  transition: all 0.25s ease-in-out;
+  width: 10rem; }
+  .btnEliminarProducto:hover, .btnVaciarCarrito:hover {
+    background-color: #ff6464;
+    border: solid 0.1rem #c8c8c8;
+    border-radius: 1rem;
+    box-shadow: 0 0.05rem 0 #c8c8c8, 0 0.35rem 0 #969696;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    translate: 0 -0.15rem; }
+
+.btnVaciarCarrito {
+  height: 3.5rem;
+  width: 15rem; }
+  .btnVaciarCarrito:hover {
+    box-shadow: 0 0.05rem 0 #c8c8c8, 0 0.35rem 0 #969696;
+    translate: 0 -0.1rem; }
+
+.carritoFooter {
+  background-color: gainsboro;
+  height: 5rem; }
+
+.precioTotal {
+  color: #142f5e;
+  font-style: italic;
+  padding-right: 2rem;
+  text-align: end; }

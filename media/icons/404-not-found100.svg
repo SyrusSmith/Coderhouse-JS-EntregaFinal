@@ -1,0 +1,50 @@
+<svg id="bdb2b3c9-51c3-4305-9898-d608d49e03a9" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .b1804a60-bdbd-4f04-a1b0-65fcd7909cf2 {
+        fill: url(#f56ec91f-bea4-4dde-a9b0-90bd226e9cfa);
+      }
+
+      .a61ea4b2-07dc-416c-9004-391bc6641641 {
+        fill: #337dff;
+      }
+
+      .f04663f2-36b3-4a89-8edf-d8d62356194b {
+        fill: url(#ecd833d0-fd8a-4443-b232-a31cf0113982);
+      }
+
+      .bd761492-13f4-4aae-8ef4-eaddee31b273 {
+        fill: #ccc;
+      }
+
+      .b75343ea-2a2f-4d19-bce3-90b1858b3e25 {
+        fill: url(#a014c405-6945-4bec-afcd-13e1a6f822fa);
+      }
+    </style>
+    <radialGradient id="f56ec91f-bea4-4dde-a9b0-90bd226e9cfa" data-name="Degradado sin nombre 6" cx="-522.99" cy="493.79" r="0.13" gradientTransform="matrix(74, 0, 0, -6, 38713.4, 2984.01)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#707070" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#b9b9b9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ecd833d0-fd8a-4443-b232-a31cf0113982" data-name="Degradado sin nombre 54" x1="9.65" y1="18.21" x2="13.37" y2="3.27" gradientTransform="translate(-2.26 3.1) rotate(-14)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#143666"/>
+      <stop offset="0.1" stop-color="#143666" stop-opacity="0.85"/>
+      <stop offset="0.36" stop-color="#143666" stop-opacity="0.48"/>
+      <stop offset="0.61" stop-color="#143666" stop-opacity="0.22"/>
+      <stop offset="0.83" stop-color="#143666" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#143666" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="a014c405-6945-4bec-afcd-13e1a6f822fa" data-name="Degradado sin nombre 53" x1="15.24" y1="20" x2="15.24" y2="9.05" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#787878"/>
+      <stop offset="0.18" stop-color="#787878" stop-opacity="0.72"/>
+      <stop offset="0.42" stop-color="#787878" stop-opacity="0.41"/>
+      <stop offset="0.65" stop-color="#787878" stop-opacity="0.19"/>
+      <stop offset="0.85" stop-color="#787878" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#787878" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <ellipse id="f75b6420-6848-4dd7-951e-366f76e77ede" data-name="Sombra" class="b1804a60-bdbd-4f04-a1b0-65fcd7909cf2" cx="12" cy="21.25" rx="9.25" ry="0.75"/>
+  <path id="b1fd0476-29b2-4214-ba36-a3cd61711285" data-name="Fondo-2" class="a61ea4b2-07dc-416c-9004-391bc6641641" d="M17.19,10.11A4.73,4.73,0,0,0,17,9.38a3.73,3.73,0,0,0-.22-.72L18.1,7.05a.33.33,0,0,0,0-.46l0,0L16,4.41a.37.37,0,0,0-.5,0L13.8,5.56a6.35,6.35,0,0,0-1.41-.42l-.76-1.88a.39.39,0,0,0-.46-.21l-3,.74a.33.33,0,0,0-.28.37v0l.21,2a4.46,4.46,0,0,0-1.05,1L5.07,7a.4.4,0,0,0-.42.27l-.84,2.88a.37.37,0,0,0,.19.44l1.89.83a4.54,4.54,0,0,0,.1.74,5.48,5.48,0,0,0,.22.72L4.93,14.43a.32.32,0,0,0,0,.46l0,0,2.1,2.15a.36.36,0,0,0,.49,0l1.67-1.19a5.81,5.81,0,0,0,1.42.42l.75,1.88a.38.38,0,0,0,.46.21l3-.74a.31.31,0,0,0,.27-.36v0l-.22-2a4.28,4.28,0,0,0,1.05-1l2,.27a.41.41,0,0,0,.43-.27l.83-2.89a.42.42,0,0,0-.19-.44Zm-5,3.4a2.83,2.83,0,1,1,2.09-3.44,2.82,2.82,0,0,1-2.09,3.44Z"/>
+  <path id="e9ea0834-0f71-4df0-b5e3-ddc1a25277d9" data-name="Fondo-2" class="f04663f2-36b3-4a89-8edf-d8d62356194b" d="M17.19,10.11A4.73,4.73,0,0,0,17,9.38a3.73,3.73,0,0,0-.22-.72L18.1,7.05a.33.33,0,0,0,0-.46l0,0L16,4.41a.37.37,0,0,0-.5,0L13.8,5.56a6.35,6.35,0,0,0-1.41-.42l-.76-1.88a.39.39,0,0,0-.46-.21l-3,.74a.33.33,0,0,0-.28.37v0l.21,2a4.46,4.46,0,0,0-1.05,1L5.07,7a.4.4,0,0,0-.42.27l-.84,2.88a.37.37,0,0,0,.19.44l1.89.83a4.54,4.54,0,0,0,.1.74,5.48,5.48,0,0,0,.22.72L4.93,14.43a.32.32,0,0,0,0,.46l0,0,2.1,2.15a.36.36,0,0,0,.49,0l1.67-1.19a5.81,5.81,0,0,0,1.42.42l.75,1.88a.38.38,0,0,0,.46.21l3-.74a.31.31,0,0,0,.27-.36v0l-.22-2a4.28,4.28,0,0,0,1.05-1l2,.27a.41.41,0,0,0,.43-.27l.83-2.89a.42.42,0,0,0-.19-.44Zm-5,3.4a2.83,2.83,0,1,1,2.09-3.44,2.82,2.82,0,0,1-2.09,3.44Z"/>
+  <path id="b58debe2-b160-4aae-ac0a-bf87f2712f29" data-name="Fondo-3" class="bd761492-13f4-4aae-8ef4-eaddee31b273" d="M20.6,18l-4.55-4.55A3.21,3.21,0,0,0,15.3,10a3.32,3.32,0,0,0-3.7-.65l2.15,2.15L12.25,13l-2.2-2.15a3.27,3.27,0,0,0,4.1,4.45l4.55,4.55a.49.49,0,0,0,.68,0l0,0,1.15-1.15a.45.45,0,0,0,.11-.63Z"/>
+  <path id="fe9d50f1-2e97-429a-8fca-56824e774163" data-name="Fondo-3" class="b75343ea-2a2f-4d19-bce3-90b1858b3e25" d="M20.6,18l-4.55-4.55A3.21,3.21,0,0,0,15.3,10a3.32,3.32,0,0,0-3.7-.65l2.15,2.15L12.25,13l-2.2-2.15a3.27,3.27,0,0,0,4.1,4.45l4.55,4.55a.49.49,0,0,0,.68,0l0,0,1.15-1.15a.45.45,0,0,0,.11-.63Z"/>
+</svg>

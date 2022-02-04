@@ -1,0 +1,204 @@
+/* --> INICIO CSS HEADER <--- */
+header {
+    display: flex;
+    width: 100%;
+    z-index: 1000;
+}
+
+.NAVBAR {
+    align-items: center;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    background-color: rgba(0, 29, 77, 0.9);
+    box-shadow: 0rem 0.25rem 0.5rem rgba(0, 9, 37, 0.8);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+
+    &__LOGO {
+        .logo {
+            /* LOGO HEADER */
+            max-height: 12rem;
+            padding: 2rem 0rem;
+            animation-name: logoRotate;
+            animation-timing-function: ease;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+    }
+
+    &__CHECKBOX {
+        display: none;
+    }
+    
+    &__TOGGLE {
+
+        display: none;
+
+        svg {
+            color: $white;
+            height: 30px;
+            width: 30px;
+        }
+
+        .iconMenu {
+            background-image: url("../media/icons/hamburguerIcon.svg");
+        }
+        
+        .iconClose {
+            background-image: url("../media/icons/closeIcon.svg");
+        }
+    }
+}
+
+@keyframes logoRotate {
+    0% {
+        transform: rotateY(0deg);
+        opacity: 1; }
+    50% { opacity: 0; }
+    100% {
+        transform: rotateY(360deg);
+        opacity: 1; }
+}
+
+/* CLASES MENU */
+.menu {
+    
+    display: flex;    
+    font-size: 1.5em;
+    font-weight: 900;
+    margin-bottom: 0rem;
+
+    .botonesMenu {
+        padding: 0.5rem 1rem;
+    }
+    
+    .botonesMenu:hover {
+        background-color: #337dff;
+    
+        & > a {
+            color: #f5f5f5;
+        }
+    }
+}
+
+.paginaActiva {
+    & > a{
+        color: white;
+        font-size: 1.7rem;
+        font-weight: 900;
+    }
+}
+
+ul {
+    & > .paginaActiva {
+        background-color: rgb(180, 180, 180);
+        box-shadow: inset 0rem 0rem 0.35rem rgb(40, 40, 40);
+    }
+}
+
+/* ÍCONO CARRITO MENÚ */
+li > a > img {
+    height: 2rem;
+}
+
+/* CONTADOR CARRITO */
+.contadorCarrito {
+    background-color: rgb(255, 101, 101);
+    border: .1rem solid rgb(255, 101, 101);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    font-variant-position: super;
+    margin-left: 1.45rem;
+    margin-top: -3rem;
+    height: 1.5rem;
+    position: relative;
+    width: 1.5rem;
+    z-index: 1000;
+}
+
+/* --> FIN CSS HEADER <-- */
+/* INICIO MEDIAS HEADER */
+@media only screen and (max-width: 1024px) {
+    .grid-header {
+        background-color: rgba(0, 29, 77, 0.9);
+        display: grid;
+        grid-area: grid-header;
+        justify-items: center;
+        width: 100%;
+    }
+
+    .NAVBAR {
+        background-color: rgba(0, 29, 77, 0.9);
+        display: grid;
+        justify-items: center;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .NAVBAR {
+        display: grid; /* PROPIEDADES PARA MOBILE */
+        justify-items: center;
+        width: 100vw;
+
+        &__TOGGLE {
+            cursor: pointer;
+            display: flex;
+            margin: 6rem $spacing-xl*1.75 0rem;
+            position: absolute;
+            right: 0;
+
+            .iconClose {
+                display: none;
+            }
+        }
+
+        .menu {
+            display: none;
+            flex-direction: row;
+            padding-bottom: 0rem;
+        }
+
+        /* FUNCIONALIDAD PARA QUE CUANDO CLICKEEN EL ICONO DEL MENU HAMBURGUESA SE DESPLIEGUE EL MENU*/
+        #NAVBAR__CHECKBOX:checked ~ .NAVBAR__TOGGLE { 
+            margin: 3rem $spacing-xl*1.75 0rem;
+        }
+
+        #NAVBAR__CHECKBOX:checked ~ .NAVBAR__TOGGLE .iconMenu {
+            display: none;
+        }
+
+        #NAVBAR__CHECKBOX:checked ~ .NAVBAR__TOGGLE .iconClose {
+            display: flex;
+        }
+
+        #NAVBAR__CHECKBOX:checked ~ .menu { 
+            display: flex;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .NAVBAR {
+            display: grid; /* PROPIEDADES PARA MOBILE */
+            justify-items: center;
+            width: 100vw;
+            .menu {
+                display: none;
+                flex-direction: column;
+                padding-bottom: $spacing-md;
+            }
+
+            #NAVBAR__CHECKBOX:checked ~ .NAVBAR__TOGGLE { 
+                margin: -10rem $spacing-xl*1.75 0rem;
+            }
+        }
+    }
+/* FIN MEDIAS HEADER */

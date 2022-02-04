@@ -1,0 +1,90 @@
+<========== HTML ==========>
+
+<aside class="FILTROS">
+            <!-- Filtros de búsqueda -->
+            <ul>
+                <span>FILTROS</span>
+                <li>
+                    <!-- <input name="all" type="checkbox" checked>
+                    <label for="all">Mostrar Todos</label> -->
+                </li>
+                <li>
+                    <!-- <input name="ssd" type="checkbox">
+                    <label for="ssd">Discos SSD</label> -->
+                </li>
+                <li>
+                    <!-- <input name="psu" type="checkbox">
+                    <label for="psu">Fuentes</label> -->
+                </li>
+                <li>
+                    <!-- <input name="case" type="checkbox">
+                    <label for="case">Gabinetes</label> -->
+                </li>
+                <li>
+                    <!-- <input name="ram" type="checkbox">
+                    <label for="ram">Memorias</label> -->
+                </li>
+                <li>
+                    <!-- <input name="screen" type="checkbox">
+                    <label for="screen">Monitores</label> -->
+                </li>
+                <li>
+                    <!-- <input name="mother" type="checkbox">
+                    <label for="mother">Mothers</label> -->
+                </li>
+                <li>
+                    <!-- <input name="peripheral" type="checkbox">
+                    <label for="peripheral">Periféricos</label> -->
+                </li>
+                <li>
+                    <!-- <input name="gpu" type="checkbox">
+                    <label for="gpu">Placas de Video</label> -->
+                </li>
+                <li>
+                    <!-- <input name="cpu" type="checkbox">
+                    <label for="cpu">Procesadores</label> -->
+                </li>
+                <li>
+                    <!-- <input name="aio" type="checkbox">
+                    <label for="aio">Refrigeraciones</label> -->
+                </li>
+                <!-- <li>
+                    <button id="filtrar">FILTRAR</button>
+                </li> -->
+            </ul>
+        </aside>
+
+
+<========== SASS ==========>
+
+    // li {
+    //     padding-top: 1rem;
+
+    //     input {
+    //         border: .1rem solid rgb(0, 29, 77);
+    //     }
+
+    //     label {
+    //         color: rgb(100, 100, 100);
+    //         font-size: 1.2rem;
+    //         font-weight: 600;
+    //         padding-left: .35rem;
+    //     }        
+    // }
+
+
+<========== JS ==========>
+
+// // Creo una variable para traer el botón que filtrará los productos
+// let botonFiltrar = document.querySelectorAll("FILTROS__BTN");
+
+// // Le agrego un eventListener y la función de filtrar el producto al botón
+// botonFiltrar.forEach(e => {
+//     e.addEventListener("click", filtrarProducto)
+// });
+
+// // Creo la función para filtrar el producto
+// function filtrarProducto(e) {
+//     // let categoriaSeleccionada = 0;
+//     console.log(e)
+// }

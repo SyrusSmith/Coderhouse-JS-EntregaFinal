@@ -1,0 +1,38 @@
+[
+    {
+        "id": 9,
+        "dataId": "P9",
+        "categoria": "Refrigeración Líquida",
+        "nombre": "Refrigeración AIO ASUS ROG Strix LC 360 RGB",
+        "imagen": "./media/imgs/ORIGINALES/asus-rog-strix-lc-360-rgb.jpg",
+        "precioBase": 3495,
+        "ganancia": 1.5
+    },
+    {
+        "id": 10,
+        "dataId": "P10",
+        "categoria": "Periféricos",
+        "nombre": "Teclado Mecánico HyperX Alloy Elite",
+        "imagen": "./media/imgs/ORIGINALES/hyperx-alloy-elite-mechanical-keyboard.jpg",
+        "precioBase": 4545,
+        "ganancia": 1.5
+    },
+    {
+        "id": 11,
+        "dataId": "P11",
+        "categoria": "Periféricos",
+        "nombre": "Headset HyperX Cloud Orbit S 7.1 3D",
+        "imagen": "./media/imgs/ORIGINALES/hyperx-cloud-orbits-gaming-headset.jpg",
+        "precioBase": 2265,
+        "ganancia": 1.5
+    },
+    {
+        "id": 12,
+        "dataId": "P12",
+        "categoria": "Periféricos",
+        "nombre": "Mouse Razer Basilisk Ultimate Wireless",
+        "imagen": "./media/imgs/ORIGINALES/razer-basilisk-ultimate-wireless.jpg",
+        "precioBase": 7345,
+        "ganancia": 1.5
+    }
+]

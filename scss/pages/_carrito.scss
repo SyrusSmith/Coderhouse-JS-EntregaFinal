@@ -1,0 +1,87 @@
+// INICIO ESTILOS CARRITO
+
+#carrito {
+    background-color: rgb(230, 230, 230);
+    border-radius: .5rem;
+    box-shadow: 0rem 0rem 1rem 0.25rem rgba(140, 180, 255, 0.5);
+    width: 1280px;
+}
+
+thead {
+    background-color: $primary;
+    border-radius: .5rem;
+}
+
+tr {
+    height: 1rem;
+}
+
+tr:nth-child(even){
+    background-color:  rgba(140, 180, 255, 0.75);
+    td {
+        color: $white;
+    }
+}
+
+th {
+    color: $white;
+    font-size: $font-xl;
+    font-weight: 900;
+}
+
+td {
+    color: $primary;
+    font-size: $font-lg;
+    font-weight: 700;
+    padding: 0rem 1rem;
+    img {
+        width: 10rem;
+    }
+}
+
+.btnEliminarProducto, .btnVaciarCarrito{
+    background-color: rgb(252, 137, 137);
+    border-radius: .5rem;
+    color: rgb(50, 50, 50);
+    font-size: $font-lg;
+    font-weight: 700;
+    height: 2.5rem;
+    letter-spacing: .15rem;
+    transition: all 0.25s ease-in-out;
+    width: 10rem;
+
+    &:hover {
+        background-color: rgb(255, 100, 100);
+        border: solid .1rem rgb(200, 200, 200);
+        border-radius: 1rem;
+        box-shadow: 0 .05rem 0 rgb(200, 200, 200),
+                    0 .35rem 0 rgb(150, 150, 150);
+        color: $white;
+        cursor: pointer;
+        font-size: $font-lg;
+        translate: 0 -0.15rem;
+    }
+}
+
+.btnVaciarCarrito {
+    height: 3.5rem;
+    width: 15rem;
+
+    &:hover {
+        box-shadow: 0 .05rem 0 rgb(200, 200, 200),
+                    0 .35rem 0 rgb(150, 150, 150);
+        translate: 0 -0.1rem;
+    }
+}
+
+.carritoFooter {
+    background-color: rgb(220, 220, 220);
+    height: 5rem;
+}
+
+.precioTotal {
+    color: rgb(20, 47, 94); //rgb(100, 100, 100)
+    font-style: italic;
+    padding-right: 2rem;
+    text-align: end;
+}

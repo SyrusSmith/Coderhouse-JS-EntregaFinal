@@ -1,0 +1,18 @@
+{
+  "name": "clase14_di_biase_dom",
+  "version": "1.0.0",
+  "description": "Proyecto Mean Machine eCommerce | Javascript - Coderhouse",
+  "main": "clase14DiBiase.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-sass": "node-sass --include-path scss scss/index.scss css/index.css",
+    "watch-sass": "nodemon -e scss -x \"npm run build-sass\""
+  },
+  "keywords": [],
+  "author": "Nahuel Di Biase",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12"
+  }
+}
