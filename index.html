@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mean Machine eCommerce</title>
+    <meta name="keywords" content="hardware, tecnologia, technology, computacion, computadoras, perifericos, teclados, mouses, ratones, mices, headsets, auriculares, monitores, gabinetes, cpus, gpus, rams, memorias, ssd, hdd, mothers, psu, fuentes, gamer, gadgets, lanzamientos, noticias, news, reviews, analisis, celulares, moviles">
+    <meta name="description" content="Somos un grupo de fanáticos del mundo del hardware, los periféricos, gadgets, y todo lo relacionado a la tecnología de consumo, y del mundo del gaming, que un día quisimos contarte todo lo relacionado a éste apasionante mundo con nuestra mirada y toque personal.">
+    
+    <title>Home | MeanMachine - Hardware & Tech</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/index.css">
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./media/icons/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./media/icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./media/icons/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./media/icons/favicon/site.webmanifest">
+    <!-- FIN FAVICON -->
 </head>
-<body>
+<body class="grid-container">
+    <h1>Hardware, Tecnología, Tecnologia, Celulares, Software, Notas, Reviews</h1>
     <!-- INICIO HEADER -->
     <header class="grid-header">
         <!-- inicio menu INDEX -->
@@ -30,23 +43,23 @@
 
             <!-- INICIO MENU -->
             <ul class="menu">
-                <li class="botonesMenu">
-                    <a href="#">INICIO</a>
-                </li>
-                <li class="botonesMenu">
-                    <a href="#">NOTICIAS</a>
-                </li>
-                <li class="botonesMenu">
-                    <a href="#">REVIEWS</a>
-                </li>
-                <li class="botonesMenu">
-                    <a href="#">NOSOTROS</a>
-                </li>
-                <li class="botonesMenu">
-                    <a href="#">UNÍTENOS</a>
-                </li>
                 <li class="botonesMenu paginaActiva">
-                    <a href="./tienda.html">TIENDA</a>
+                    <a href="./index.html">INICIO</a>
+                </li>
+                <li class="botonesMenu">
+                    <a href="./pages/noticias.html">NOTICIAS</a>
+                </li>
+                <li class="botonesMenu">
+                    <a href="./pages/reviews.html">REVIEWS</a>
+                </li>
+                <li class="botonesMenu">
+                    <a href="./pages/nosotros.html">NOSOTROS</a>
+                </li>
+                <li class="botonesMenu">
+                    <a href="./pages/unitenos.html">UNÍTENOS</a>
+                </li>
+                <li class="botonesMenu">
+                    <a href="./pages/tienda.html">TIENDA</a>
                 </li>
                 <li class="botonesMenu">
                     <a href="./pages/carrito.html" id="carritoDisplay">
@@ -64,112 +77,192 @@
 
     <!-- INICIO MAIN -->
     <main>
-        <section id="listaProductos" class="PRODUCTOS" category="todos">
-            <!-- ACÁ Productos del eCommerce -->
+        <!-- Inicio sección CARROUSEL notas principales -->
+        <section class="container">
+            <div id="carouselIndex" class="CARROUSEL carousel slide" data-bs-ride="carousel">
+                <div class="CARROUSEL__NOTAS carrousel carousel-inner">
+                    <div class="INDICADORES carousel-indicators">
+                        <button type="button" data-bs-target="#carouselIndex" data-bs-slide-to="0" class="INDICADORES__BOTON--ACTIVO active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselIndex" data-bs-slide-to="1" class="INDICADORES__BOTON" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselIndex" data-bs-slide-to="2" class="INDICADORES__BOTON" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="CARROUSEL__NOTAS--ACTIVO NOTA carousel-item active">
+                        <a href="./index.html">
+                            <img src="./media/imgs/Home/Carrousel/HyperxCloudOrbitS.webp" class="NOTA__IMG d-block w-100" alt="Imagen Headset Hyperx Cloud Orbit S" loading="lazy">
+                            <div class="NOTA__TEXTO carrouselTexto  d-md-block"> <!-- Clase sacada para que aparezcan los textos en mobile d-none-->
+                                <span class="NOTA__TEXTO__VOLANTA carrouselVolanta">Noticias » Periféricos »</span>
+                                <h2 class="NOTA__TEXTO__TITULO carrouselH2">Hyperx Cloud Orbit S: ¿es el headset definitivo?</h2>
+                                <span class="NOTA__TEXTO__VOLANTA carrouselVolantaMobile">Noticias » Periféricos »</span>
+                                <p class="NOTA__TEXTO__PARRAFO carrouselP">Los auriculares HyperX Cloud Orbit S te lanzan a otra dimensión de sonido envolvente de alta calidad gracias a los controladores magnéticos planos AudezeTM y a la tecnología de audio 3D Waves Nx®. Escucha los sonidos con una claridad impresionante y una precisión increíble gracias a la respuesta de frecuencia superrápida y a la resistencia a la distorsión de los... <!-- controladores magnéticos planos de 100 mm. La tecnología de audio 3D crea un espacio de sonido tridimensional, que permite a Cloud Orbit ofrecer una experiencia de audio más realista con una localización y un posicionamiento del sonido ultrapreciso. Los auriculares incluyen tres opciones de cables extraíbles para que puedas personalizar tu configuración con audio 3D envolvente, ya sea para PC, Xbox One1, PS4 o móvil. La tecnología de seguimiento de la cabeza, solo disponible en Cloud Orbit S, rastrea los más sutiles movimientos casi 1000 veces por segundo para ofrecer una inmersión total, a la vez que estabiliza los entornos de audio de los juegos para proporcionar una localización de sonido precisa. --></p>
+                            </div>
+                        </a>                    
+                    </div>
+                    <div class="CARROUSEL__NOTAS NOTA carousel-item">
+                        <a href="./index.html">
+                            <img src="./media/imgs/Home/Carrousel/RTX3090-2.webp" class="ITEM__IMG d-block w-100" alt="Foto placa de video Nvidia GeForce RTX 3090" loading="lazy">
+                            <div class="NOTA__TEXTO carrouselTexto  d-md-block"> <!-- Clase sacada para que aparezcan los textos en mobile d-none-->
+                                <span class="NOTA__TEXTO__VOLANTA carrouselVolanta">Noticias » Hardware »</span>
+                                <h2 class="NOTA__TEXTO__TITULO carrouselH2">RTX 3090 Super: ¿10752 Cuda Cores y consumo de +400W?</h2>
+                                <span class="NOTA__TEXTO__VOLANTA carrouselVolantaMobile">Noticias » Hardware »</span>
+                                <p class="NOTA__TEXTO__PARRAFO carrouselP">Según un nuevo rumor, proveniente del reconocido filtrador Greymon55, Nvidia estaría trabajando en una GeForce RTX 3090 Super, buscando llevar el potencial de Ampere al máximo con este nuevo producto. Como comparación, la RTX 3090 estándar tiene 10496 Cuda Cores, 328 Tensor Cores, y 82 RT Cores, por lo que la diferencia no sería demasiado grande. Sin embargo...</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="CARROUSEL__NOTAS NOTA carousel-item">
+                        <a href="./index.html">
+                            <img src="./media/imgs/Home/Carrousel/Review-AMD-Ryzen-7-5700G(MOD).webp" class="ITEM__IMG d-block w-100" alt="Foto CPU AMD Ryzen 7 5700G" loading="lazy">
+                            <div class="ITEM__TEXTO carrouselTexto  d-md-block"> <!-- Clase sacada para que aparezcan los textos en mobile d-none-->
+                                <span class="NOTA__TEXTO__VOLANTA carrouselVolanta">Reviews » Hardware » CPUs</span>
+                                <h2 class="NOTA__TEXTO__TITULO carrouselH2">Ryzen 7 5700G: ¿le decimos chau a las GPUs?</h2>
+                                <span class="NOTA__TEXTO__VOLANTA carrouselVolantaMobile">Reviews » Hardware »</span>
+                                <p class="NOTA__TEXTO__PARRAFO carrouselP">Hoy tenemos para revisar el nuevo AMD Ryzen 7 5700G, el modelo superior de la nueva línea de APUs basados en Zen 3 + Vega que llega para ofrecer un alto rendimiento de CPU junto con una gráfica integrada que permitirá jugar cualquier tipo de juego en 1080p hasta conseguir una gráfica dedicada una vez que se normalicen los precios. El nuevo Ryzen 7 cuenta con...</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <button class="CARROUSEL__BOTON--ANTERIOR carousel-control-prev" type="button" data-bs-target="#carouselIndex" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="CARROUSEL__BOTON--SIGUIENTE carousel-control-next" type="button" data-bs-target="#carouselIndex" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
         </section>
-        <section id="cargarProductos" class="cargarProductos"></section>
-        <aside class="FILTROS">
-            <!-- Filtros de búsqueda -->
-            <ul>
-                <span>FILTROS</span>
-                <li>
-                    <button class="FILTROS__BTN" category="todos">
-                        <p>Todos</p>
-                    </button>
-                </li>
-                <li>
-                    <button class="FILTROS__BTN" category="SSD">
-                        <p>Discos SSD</p>
-                    </button>
-                </li>
-                <li>
-                    <button class="FILTROS__BTN" category="Fuente de Alimentación">
-                        <p>Fuentes de Alimentación</p>
-                    </button>
-                </li>
-                <li>
-                    <button class="FILTROS__BTN" category="Gabinete">
-                        <p>Gabinetes</p>
-                    </button>
-                </li>
-                <li>
-                    <button class="FILTROS__BTN" category="Memoria Ram">
-                        <p>Memorias Ram</p>
-                    </button>
-                </li>
-                <li>
-                    <button class="FILTROS__BTN" category="Monitor">
-                        <p>Monitores</p>
-                    </button>
-                </li>
-                <li>
-                    <button class="FILTROS__BTN" category="Motherboard">
-                        <p>Mothers</p>
-                    </button>
-                </li>
-                <li>
-                    <button class="FILTROS__BTN" category="Periféricos">
-                        <p>Periféricos</p>
-                    </button>
-                </li>
-                <li>
-                    <button class="FILTROS__BTN" category="Placa de Video">
-                        <p>Placas de Video</p>
-                    </button>
-                </li>
-                <li>
-                    <button class="FILTROS__BTN" category="Procesador">
-                        <p>Procesadores</p>
-                    </button>
-                </li>
-                <li>
-                    <button class="FILTROS__BTN" category="Refrigeración Líquida">
-                        <p>Refrigeraciones</p>
-                    </button>
-                </li>
-            </ul>
-        </aside>
-    </main>
-    <!-- FIN MAIN -->
+        <!-- Fin sección notas principales -->
 
-    <!-- INICIO FOOTER -->
-    <footer>
-        <!-- ACÁ Redes y contacto -->
-        <section class="CONTACTO">
-            <!-- Formulario de contacto -->
-            <form action="/" method="/" id="newsletterForm" enctype="application/x-www-form-urlencoded" name="formulario suscripción">
-                <h3 class="CONTACTO__H3">Enterate siempre antes que el resto</h3>
-                <h3 class="CONTACTO__H3">¡UNITE a nuestro newsletter!</h3>
-                <!-- Input Nombre -->
-                <div class="CONTACTO__FORM__INPUT">
-                    <input type="text" name="Nombre" placeholder="Ingresá tu nombre" id="newsletterName">
-                    <!-- Si hay un error en el nombre, lo muestro acá -->
-                    <div class="CONTACTO__FORM__ERROR" id="errorNewsletterName"></div>
-                </div>
-                
-                <!-- Input Email -->
-                <div class="CONTACTO__FORM__INPUT">
-                    <input type="email" name="Email" id="newsletterEmail" placeholder="Ingresá tu email">
-                    <!-- Si hay un error con el email, lo muestro acá -->
-                    <div class="CONTACTO__FORM__ERROR" id="errorNewsletterEmail"></div>
-                </div>
-                
-                <button class="CONTACTO__FORM__BOTON" type="submit">Suscribirse</button>
-            </form>
-            <!-- Acá muestro si el formulario se envió correctamente -->
-            <article class="CONTACTO__ENVIADO" id="resultForm">
+        <!-- Inicio sección notas terciarias -->
+        <section class="TERCIARIAS sectionNotasTerciarias">
+            <article class="TERCIARIAS__NOTA notasTerciarias">
+                <a href="./index.html">
+                    <span class="TERCIARIAS__NOTA__VOLANTA">NOTICIAS » Celulares »</span>
+                    <img class="TERCIARIAS__NOTA__IMG" src="./media/imgs/Home/Terciarias/Apple-ya-vendio-mas-de-2.000-millones-de-iPhones-el-legado-de-Jobs-esta-mas-vivo-que-nunca.webp" alt="Foto de teléfonos Apple iPhone" loading="lazy">
+                    <h4 class="TERCIARIAS__NOTA__TITULO">Apple ya vendio mas de 2.000 millones de iPhones. El legado de Jobs más vivo que nunca</h4>
+                </a>
+            </article>
+            <article class="TERCIARIAS__NOTA notasTerciarias">
+                <a href="./index.html">
+                    <span class="TERCIARIAS__NOTA__VOLANTA">NOTICIAS » Industria »</span>
+                    <img class="TERCIARIAS__NOTA__IMG" src="./media/imgs/Home/Terciarias/El-CEO-de-Activision-Blizzard-quiere-hacer-de-la-empresa-uno-de-los-lugares-mas-inclusivos-para-trabajar.webp" alt="Foto del CEO de Activision/Blizzard" loading="lazy">
+                    <h4 class="TERCIARIAS__NOTA__TITULO">Activision-Blizzard quiere ser uno de los lugares más inclusivos donde trabajar</h4>
+                </a>
+            </article>
+            <article class="TERCIARIAS__NOTA notasTerciarias">
+                <a href="./index.html">
+                    <span class="TERCIARIAS__NOTA__VOLANTA">REVIEWS » Mothers »</span>
+                    <img class="TERCIARIAS__NOTA__IMG" src="./media/imgs/Home/Terciarias/Review-Gigabyte-B550I-Aorus-Pro-AX-potencia-en-envase-pequeno.webp" alt="Foto Placa Madre Gigabyte B550I Aorus Pro AX" loading="lazy">
+                    <h4 class="TERCIARIAS__NOTA__TITULO">Probamos la nueva Gigabyte B550I Aorus Pro AX, potencia en un envase pequeño</h4>
+                </a>
+            </article>
+            <article class="TERCIARIAS__NOTA notasTerciarias">
+                <a href="./index.html">
+                    <span class="TERCIARIAS__NOTA__VOLANTA">NOTICIAS » Software »</span>
+                    <img class="TERCIARIAS__NOTA__IMG" src="./media/imgs/Home/Terciarias/Microsoft-te-dejara-instalar-Windows-11-en-PCs-mas-antiguas-pero-con-una-advertencia.webp" alt="Imagen Ilustrativa con el logo de Windows 11" loading="lazy">
+                    <h4 class="TERCIARIAS__NOTA__TITULO">Windows 11 se podrá instalar en PCs más antiguas pero con una advertencia</h4>
+                </a>
+            </article>
+            <article class="TERCIARIAS__NOTA notasTerciarias">
+                <a href="./index.html">
+                    <span class="TERCIARIAS__NOTA__VOLANTA">REVIEWS » GPUs »</span>
+                    <img class="TERCIARIAS__NOTA__IMG" src="./media/imgs/Home/Terciarias/Review-Nvidia-GeForce-RTX-3060-Ti-Founders-Edition-la-nueva-reina-del-precio-rendimiento.webp" alt="Foto Placa de Video Nvidia GeForce RTX 3060 Ti" loading="lazy">
+                    <h4 class="TERCIARIAS__NOTA__TITULO">Nvidia GeForce RTX 3060 Ti Founders Edition la nueva reina del precio-rendimiento</h4>
+                </a>
             </article>
         </section>
-        <section class="REDES">
-            <!-- Links a Redes -->
+        <!-- Fin sección notas terciarias -->
+
+        <!-- Inicio sección notas secundarias -->
+        <section class="SECUNDARIAS sectionNotasSecundarias">
+            <article class="SECUNDARIAS__NOTA">
+                <a href="./index.html">
+                    <div class="NOTA notasSecundarias">
+                        <img class="NOTA__IMG" src="./media/imgs/Noticias/Secundarias/MafiaDefinitiveEdition8kMOD).webp" alt="Imagen del juego Mafia Definitive Edition" loading="lazy">
+                        <div class="NOTA__TEXTO notasSecundariasTexto">
+                            <span class="NOTA__TEXTO__VOLANTA notasSecundariasVolanta">NOTICIAS » Videojuegos »</span>
+                            <h3 class="NOTA__TEXTO__TITULO">Mafia Definitive Edition se ve híper realista con Ray Tracing a 8K</h3>
+                            <p class="NOTA__TEXTO__PARRAFO">Mafia Definitive Edition no solo es una versión mejorada de Mafia, también es uno de los juegos con mejores gráficos del año pasado. Gracias al trabajo de la comunidad, el juego incluso puede lucir como uno de los más realistas.
+                            Digital Dreams es quien en esta oportunidad nos trae un video 8K mostrando Mafia Definitive Edition con el mod Beyond All Limits Ray Tracing. Este mod complementa las... <!-- opciones de Ray Tracing nativas de Mafia--></p>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="SECUNDARIAS__NOTA">
+                <a href="./index.html">
+                    <div class="NOTA notasSecundarias">
+                        <img class="NOTA__IMG" src="./media/imgs/Noticias/Secundarias/MercadoChips2022.webp" alt="Imagen de microchips" loading="lazy">
+                        <div class="NOTA__TEXTO notasSecundariasTexto">
+                            <span class="notasSecundariasVolanta">NOTICIAS » Computación »</span>
+                            <h3 class="NOTA__TITULO">Se espera que el mercado de chips vuelva a la normalidad en 2022</h3>
+                            <p class="NOTA__TEXTO">El difícil momento de escasez de materia prima para la fabricación de productos electrónicos debería aliviarse este año, según un estudio realizado por IDC (International Data Corporation). Se espera un aumento en el mercado de semiconductores de un 17,3%, alcanzando su capacidad máxima en 2023.
+                            <br>
+                            El crecimiento en este mercado el año pasado fue del 10,8% y, antes de alcanzar el pico de...</p>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="SECUNDARIAS__NOTA">
+                <a href="./index.html">
+                    <div class="notasSecundarias">
+                        <img src="./media/imgs/Reviews/Secundarias/REVIEW-NVIDIA-RTX-3080-Ti.webp" alt="Foto Placa de Video NVidia GeForce RTX 3080 Ti" loading="lazy">
+                        <div class="notasSecundariasTexto">
+                            <span class="notasSecundariasVolanta">Reviews » Hardware » GPUs »</span>
+                            <h3>Probamos la nueva NVIDIA RTX 3080 Ti Founders Edition.</h3>
+                            <p>Ayer por la madrugada Nvidia anunció sus nuevas GeForce RTX 3080 Ti y RTX 3070 Ti, y hoy tenemos para ustedes el review de la primera de ellas, que viene para ofrecer una nueva propuesta para quienes buscan más rendimiento que la RTX 3080 sin pagar por los 24GB que tiene la RTX 3090. La RTX 3080 Ti cuenta con 12GB de memoria ram GDDR6X sobre un bus de 384 bits, ofreciendo 20%...</p>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="SECUNDARIAS__NOTA">
+                <a href="./index.html">
+                    <div class="notasSecundarias">
+                        <img src="./media/imgs/Reviews/Secundarias/Memoria-RAM-Viper-RGB-DDR4-16GB-2x8-3200MHz.webp" alt="Foto de Memorias RAM Viper en Banco de Pruebas" loading="lazy">
+                        <div class="notasSecundariasTexto">
+                            <span class="notasSecundariasVolanta">Reviews » Hardware » RAMs »</span>
+                            <h3>Nuevas Viper RGB DDR4 16GB 2x8 3200MHz</h3>
+                            <p>Hoy tenemos para revisar uno de los últimos kits de memorias de la marca Patriot, perteneciente a su línea Viper RGB White en su variante de 2x8GB 3200MHz C16. Este kit tiene un increíble equilibrio entre estética, rendimiento y precio, lo que sueñan todos los gamers, por lo que no se pueden perder este review. Compatibles tanto con Intel como con AMD, estas memorias trabajan a 3200MHz con...</p>
+                        </div>
+                    </div>
+                </a>
+            </article>
         </section>
+        <!-- Fin sección notas secundarias -->
+    </main> <!-- FIN MAIN -->
+
+    <!-- INICIO FOOTER -->
+    <footer class="grid-footer">
+        <div class="grid-footer-logo">
+            <a href="#top">
+                <img class="footerLogo" src="./media/LogoMeanMachineNegativo.png" alt="Logo Mean Machine Web">
+            </a>
+        </div>
+        <div class="footerSocial grid-footer-instagram">
+            <a href="./index.html">
+                <div class="footerIconoInstagram" alt="Ícono Instagram"></div>
+                <span class="footerEtiquetaSocial">MeanMachine H&T</span>
+            </a>
+        </div>
+        <div class="footerSocial grid-footer-youtube">
+            <a href="./index.html">
+                <div class="footerIconoYoutube" alt="Ícono Youtube"></div>
+                <span class="footerEtiquetaSocial">MeanMachine H&T</span>
+            </a>
+        </div>
+        <div class="footerSocial grid-footer-facebook">
+            <a href="./index.html">
+                <div class="footerIconoFacebook" alt="Ícono Facebook"></div>
+                <span class="footerEtiquetaSocial">MeanMachine H&T</span>
+            </a>
+        </div>
+        <div class="footerSocial grid-footer-email">
+            <a href="./index.html">
+                <div class="footerIconoMail" alt="Ícono Email"></div>
+                <span class="footerEtiquetaSocial">MeanMachine H&T</span>
+            </a>
+        </div>
     </footer>
     <!-- FIN FOOTER -->
-    
-    <!-- SCRIPTS JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="./js/main-EntregaFinal-DiBiase.js"></script>
-    <!-- <script src="./js/carrito-EntregaFinal-DiBiase.js"></script> -->
-    <script src="./js/formulario-EntregaFinal-DiBiase.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 </html>

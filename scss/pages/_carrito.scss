@@ -4,7 +4,7 @@
     background-color: rgb(230, 230, 230);
     border-radius: .5rem;
     box-shadow: 0rem 0rem 1rem 0.25rem rgba(140, 180, 255, 0.5);
-    width: 1280px;
+    width: 128rem;
 }
 
 thead {
@@ -39,8 +39,14 @@ td {
     }
 }
 
-.btnEliminarProducto, .btnVaciarCarrito{
-    background-color: rgb(252, 137, 137);
+.buttons {
+    padding-right: 1rem;
+    text-align: end;
+}
+
+.btnComprarCarrito, .btnEliminarProducto, .btnVaciarCarrito{
+    background-color: rgb(220, 220, 220);
+    border: solid .25rem rgb(252, 137, 137);
     border-radius: .5rem;
     color: rgb(50, 50, 50);
     font-size: $font-lg;
@@ -60,6 +66,19 @@ td {
         cursor: pointer;
         font-size: $font-lg;
         translate: 0 -0.15rem;
+    }
+}
+
+.btnComprarCarrito {
+    background-color: rgb(97, 255, 111);
+    border: none;
+    font-weight: 900;
+    height: 3.5rem;
+    margin-left: 1rem;
+    width: 15rem;
+
+    &:hover {
+        background-color: rgb(56, 151, 64);
     }
 }
 
@@ -85,3 +104,58 @@ td {
     padding-right: 2rem;
     text-align: end;
 }
+
+ // Background del modal
+ .MODAL {
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    display: block;
+    height: 100%;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    // Contenido del modal
+    &__CONTENT {
+        background-color: #fefefe;
+        border: 1px solid #888;
+        margin: 15% auto;
+        padding: $spacing-xl;
+        width: 40%;
+
+        p{
+            font-weight: 700;
+            font-size: $font-xl;
+            padding: $spacing-xl;
+            text-align: center;
+        }
+
+        &__MESSAGE {
+            color: $primary;
+        }
+
+        // Botón Cerrar
+        &__CLOSE {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            height: 3rem;
+            margin-bottom: 1rem;
+            width: 3rem;
+
+            p {
+                padding: 0;
+            }
+            &:hover, :focus {
+                color: rgb(255, 100, 100);
+                text-decoration: none;
+                cursor: pointer;
+                }
+        }
+    }
+  }
+// FIN ESTILOS CARRITO

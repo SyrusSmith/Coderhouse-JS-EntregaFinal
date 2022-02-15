@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "dataId": "P1",
+        "category": "Procesador",
+        "name": "Procesador Intel Core i7 12700k 12th Gen 3.6Ghz LGA1700",
+        "image": "../media/imgs/Tienda/intel-i7-12th.jpg",
+        "basePrice": 7345,
+        "profit": 1.5
+    },
+    {
+        "id": 2,
+        "dataId": "P2",
+        "category": "Memoria Ram",
+        "name": "Memoria Corsair Vengeance Pro 2x 8Gb 3600Mhz DDR4",
+        "image": "../media/imgs/Tienda/corsair-vengeance-pro.jpg",
+        "basePrice": 3150,
+        "profit": 1.5
+    },
+    {
+        "id": 3,
+        "dataId": "P3",
+        "category": "Motherboard",
+        "name": "Mother Aorus B550 Master Socket AM4",
+        "image": "../media/imgs/Tienda/aorus-b550-master.jpg",
+        "basePrice": 5720,
+        "profit": 1.5
+    },
+    {
+        "id": 4,
+        "dataId": "P4",
+        "category": "SSD",
+        "name": "SSD M.2 NVME Seagate Firecuda 1Tb Gen3 X4",
+        "image": "../media/imgs/Tienda/seagate-firecuda.jpg",
+        "basePrice": 1875,
+        "profit": 1.5
+    },
+    {
+        "id": 5,
+        "dataId": "P5",
+        "category": "Fuente de Alimentación",
+        "name": "Fuente Seasonic Focus PX-850 850w 80+ Platinum",
+        "image": "../media/imgs/Tienda/seasonic-focus-px850.jpg",
+        "basePrice": 2895,
+        "profit": 1.5
+    },
+    {
+        "id": 6,
+        "dataId": "P6",
+        "category": "Placa de Video",
+        "name": "Placa de Video Aorus RTX 3080Ti Xtreme 12Gb",
+        "image": "../media/imgs/Tienda/aorus-rtx-3080ti-xtreme-12g.jpg",
+        "basePrice": 15620,
+        "profit": 1.5
+    },
+    {
+        "id": 7,
+        "dataId": "P7",
+        "category": "Gabinete",
+        "name": "Gabinete Corsair Crystal Series 680X ATX Dual Chamber",
+        "image": "../media/imgs/Tienda/corsair-crystal-series 680x.jpg",
+        "basePrice": 8935,
+        "profit": 1.5
+    },
+    {
+        "id": 8,
+        "dataId": "P8",
+        "category": "Monitor",
+        "name": "Monitor LG Ultragear 21:9 34 pulgadas 34GP950G-B",
+        "image": "../media/imgs/Tienda/lg-ultragear-34gp950g-b-34.jpg",
+        "basePrice": 19360,
+        "profit": 1.5
+    }
+]

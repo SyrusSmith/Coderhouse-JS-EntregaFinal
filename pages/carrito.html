@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compras</title>
     <link rel="stylesheet" href="../css/index.css">
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../media/icons/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../media/icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../media/icons/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../media/icons/favicon/site.webmanifest">
+    <!-- FIN FAVICON -->
 </head>
 <body>
     <!-- INICIO HEADER -->
@@ -30,27 +37,27 @@
 
             <!-- INICIO MENU -->
             <ul class="menu">
-                <li class="botonesMenu">
-                    <a href="./">INICIO</a>
+                <li class="MENU__BOTON botonesMenu">
+                    <a href="../index.html">INICIO</a>
+                </li>
+                <li class="MENU__BOTON botonesMenu">
+                    <a href="./noticias.html">NOTICIAS</a>
+                </li>
+                <li class="MENU__BOTON botonesMenu">
+                    <a href="./reviews.html">REVIEWS</a>
+                </li>
+                <li class="MENU__BOTON botonesMenu">
+                    <a href="./nosotros.html">NOSOTROS</a>
+                </li>
+                <li class="MENU__BOTON botonesMenu">
+                    <a href="./unitenos.html">UNÍTENOS</a>
                 </li>
                 <li class="botonesMenu">
-                    <a href="/">NOTICIAS</a>
-                </li>
-                <li class="botonesMenu">
-                    <a href="/">REVIEWS</a>
-                </li>
-                <li class="botonesMenu">
-                    <a href="/">NOSOTROS</a>
-                </li>
-                <li class="botonesMenu">
-                    <a href="/">UNÍTENOS</a>
-                </li>
-                <li class="botonesMenu">
-                    <a href="../index.html">TIENDA</a>
+                    <a href="./tienda.html">TIENDA</a>
                 </li>
                 <li class="botonesMenu paginaActiva">
-                    <a href="/" id="carritoDisplay">
-                        <img src="../media/icons/Carrito.svg" alt="Ícono Carrito de Compras">
+                    <a href="./carrito.html" id="carritoDisplay">
+                        <img src="../media/icons/carrito.svg" alt="Ícono Carrito de Compras">
                     </a>
                 </li>
                 <!-- <li class="searchBox">
@@ -80,16 +87,19 @@
             </tbody>
             <tfoot class="carritoFooter">
                 <tr>
-                    <th colspan="5" id="precioTotal"></th>
-                    <th><button id="btnVaciarCarrito" class="btnVaciarCarrito">Vaciar Carrito</button></th>
+                    <th colspan="5" class="buttons">
+                        <button id="btnVaciarCarrito" class="btnVaciarCarrito">Vaciar Carrito</button>
+                        <button id="btnPurchaseCart" class="btnComprarCarrito">Comprar</button>
+                    </th>
+                    <th id="precioTotal"></th>
                 </tr>
             </tfoot>
-        </table>        
+        </table>
     </main>
     <!-- FIN MAIN CARRITO -->
 
     <!-- INICIO FOOTER -->
-    <footer>
+    <footer class="footerCarrito">
         <!-- ACÁ Redes y contacto -->
         <section class="CONTACTO">
             <!-- Formulario de contacto -->

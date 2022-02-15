@@ -1,0 +1,5 @@
+RTX3090
+
+Nvidia estaría trabajando en una RTX 3090 Super con 10752 Cuda Cores y consumo de +400W
+
+Según un nuevo rumor, proveniente del reconocido filtrador Greymon55, Nvidia estaría trabajando en una GeForce RTX 3090 Super, buscando llevar el potencial de Ampere al máximo con este nuevo producto.

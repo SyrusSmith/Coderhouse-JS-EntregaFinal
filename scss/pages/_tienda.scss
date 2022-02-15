@@ -1,12 +1,20 @@
 /* INICIO CLASES TIENDA */
 
-main {
+.bodyTienda {
+    display: grid;
+    gap: $spacing-xl;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr auto;
+}
+
+.mainTienda {
+    align-items: flex-start;
     display: grid;
     grid-template-areas: 
     'productos productos productos productos filtros'
     'cargarProductos cargarProductos cargarProductos cargarProductos cargarProductos';
     justify-content: center;
-    margin-top: 20rem;
+    // margin-top: 20rem;
     max-width: 1280rem;
     padding-bottom: 8rem;
 }

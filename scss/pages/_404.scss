@@ -1,0 +1,62 @@
+/* INICIO CLASES 404.html */
+
+.containerNotFound {
+    height: 100vh;
+}
+
+.notFound {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin-top: -3rem;
+    // min-height: 65.5vh;
+    min-width: 98vw;
+
+    &__H1{
+        display: block;
+        color: $primary;
+        font-size: $font-xxl*2;
+        font-weight: 900;
+    }
+
+    &__H2 {
+        color: $terciary;
+        font-size: $font-xxl;
+        font-weight: 700;
+    }
+
+    &__H3 {
+        color: $terciary;
+        font-size: $font-xl;
+        font-weight: 500;
+        font-style: italic;
+    }
+
+    &__img {
+        height: 30rem;
+        width: 30rem;
+    }
+}
+
+.footer404{
+    position: absolute;
+}
+/* FIN CLASES 404.html */
+/* INICIO MEDIAS 404.html */
+@media only screen and (max-width: 1024px) {
+    .container {
+        height: 90vh;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+
+    .container {
+        padding: $spacing-xl*20 $spacing-xl*2 $spacing-xl*10;
+    }
+    .footer404 {
+        position: relative;
+    }
+}

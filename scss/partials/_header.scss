@@ -64,13 +64,14 @@ header {
 
 /* CLASES MENU */
 .menu {
-    
+    align-items: center;
     display: flex;    
     font-size: 1.5em;
     font-weight: 900;
     margin-bottom: 0rem;
 
     .botonesMenu {
+        height: 3.1rem;
         padding: 0.5rem 1rem;
     }
     
@@ -118,7 +119,6 @@ li > a > img {
     width: 1.5rem;
     z-index: 1000;
 }
-
 /* --> FIN CSS HEADER <-- */
 /* INICIO MEDIAS HEADER */
 @media only screen and (max-width: 1024px) {

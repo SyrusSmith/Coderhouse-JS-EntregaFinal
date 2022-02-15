@@ -1,10 +1,9 @@
 /* --> INICIO CSS FOOTER <-- */
 
 footer {
-    background-color: rgb(204, 204, 204);
+    background-color: rgb(204,204,204);
     bottom: 0; /* Para que el footer quede pegado abajo */
-    display: grid;
-    height: 30rem;
+    display: flex;
     justify-content: center;
     position: relative; /* Para que el footer quede pegado abajo */
     width: 100%;
@@ -23,8 +22,8 @@ footer {
             padding: $spacing-md 0;
         }
         &__INPUT > input {
-            // border: .2rem solid $secondary;
-            border-radius: .35rem;
+            border: .2rem solid $secondary;
+            border-radius: .75rem;
             height: 3rem;
             padding-left: $spacing-md;
             width: 35rem;
@@ -96,139 +95,139 @@ footer {
     }
 }
 
-// .footerLogo {
-//     max-height: 10rem;
-//     padding: $spacing-xl 0rem;
-// }
+.footerLogo {
+    max-height: 10rem;
+    padding: $spacing-xl 0rem;
+}
 
-// .footerSocial {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     margin: $spacing-xl;
+.footerSocial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: $spacing-xl;
 
-//     a {
-//         align-items: center;
-//         display: flex;
-//         padding: $spacing-lg;
-//     }
+    a {
+        align-items: center;
+        display: flex;
+        padding: $spacing-lg;
+    }
 
-//     @each $social in Instagram, Youtube, Facebook, Mail {
-//         .footerIcono#{$social} {
-//             background-color: rgb(180, 180, 180);
-//             background-image: url("../media/icons/#{$social}-gris.svg");
-//             border-radius: 0.5rem;
-//             height: 30px;
-//             width: 30px;
-//             overflow: hidden;
-//         }
-//     }
-// }
+    @each $social in Instagram, Youtube, Facebook, Mail {
+        .footerIcono#{$social} {
+            background-color: rgb(180, 180, 180);
+            background-image: url("../media/icons/#{$social}-gris.svg");
+            border-radius: 0.5rem;
+            height: 30px;
+            width: 30px;
+            overflow: hidden;
+        }
+    }
+}
 
-// .footerEtiquetaSocial {
-//     color: rgb(80,80,80);
-//     font-size: $font-lg;
-//     font-weight: 700;
-//     padding: $spacing-sm;
-// }
+.footerEtiquetaSocial {
+    color: rgb(80,80,80);
+    font-size: $font-lg;
+    font-weight: 700;
+    padding: $spacing-sm;
+}
 
-// @keyframes bump {
-//     33% {
-//         transform: scale(1.8);
-//     }
-//     66% {
-//         transform: scale(0.8);
-//     }
-//     100% {
-//         transform: scale(1);
-//     }
+@keyframes bump {
+    33% {
+        transform: scale(1.8);
+    }
+    66% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
     
-// }
+}
 
-// .footerSocial:hover {
-//     background-color: rgba(0, 110, 255, 0.3);
-//     transform: scale(1.1);
+.footerSocial:hover {
+    background-color: rgba(0, 110, 255, 0.3);
+    transform: scale(1.1);
 
-//     @each $socialHover in Instagram, Youtube, Facebook, Mail {
-//         .footerIcono#{$socialHover} {
-//             animation: bump 0.5s ease-in-out;
-//             background-image: url("../media/icons/#{$socialHover}.svg");
-//             overflow: hidden;
-//         }
-//     }
+    @each $socialHover in Instagram, Youtube, Facebook, Mail {
+        .footerIcono#{$socialHover} {
+            animation: bump 0.5s ease-in-out;
+            background-image: url("../media/icons/#{$socialHover}.svg");
+            overflow: hidden;
+        }
+    }
 
-//     .footerEtiquetaSocial {
-//         color: white;
-//     }
-// }
-// /* --> FIN CSS FOOTER <-- */
+    .footerEtiquetaSocial {
+        color: white;
+    }
+}
+/* --> FIN CSS FOOTER <-- */
 
-// /* INICIO MEDIAS FOOTER */
-// @media only screen and (max-width: 1024px) {
+/* INICIO MEDIAS FOOTER */
+@media only screen and (max-width: 1024px) {
 
-//     .grid-footer {
-//         align-items: center;        
-//         column-gap: 0rem;
-//         display: grid;
-//         grid-area: grid-footer;
-//         grid-template-areas: 
-//         "grid-footer-logo grid-footer-instagram grid-footer-youtube"
-//         "grid-footer-logo grid-footer-facebook grid-footer-email";
-//         justify-content: center;
-//         padding: $spacing-xl;
-//         position: relative;
-//     }
+    .grid-footer {
+        align-items: center;        
+        column-gap: 0rem;
+        display: grid;
+        grid-area: grid-footer;
+        grid-template-areas: 
+        "grid-footer-logo grid-footer-instagram grid-footer-youtube"
+        "grid-footer-logo grid-footer-facebook grid-footer-email";
+        justify-content: center;
+        padding: $spacing-xl;
+        position: relative;
+    }
     
-//     .grid-footer-logo {
-//         display: grid;
-//         grid-area: grid-footer-logo;
-//     }
+    .grid-footer-logo {
+        display: grid;
+        grid-area: grid-footer-logo;
+    }
     
-//     .grid-footer-instagram {
-//         display: grid;
-//         grid-area: grid-footer-instagram;
-//     }
+    .grid-footer-instagram {
+        display: grid;
+        grid-area: grid-footer-instagram;
+    }
     
-//     .grid-footer-youtube {
-//         display: grid;
-//         grid-area: grid-footer-youtube;
-//     }
+    .grid-footer-youtube {
+        display: grid;
+        grid-area: grid-footer-youtube;
+    }
     
-//     .grid-footer-facebook {
-//         display: grid;
-//         grid-area: grid-footer-facebook;
-//     }
+    .grid-footer-facebook {
+        display: grid;
+        grid-area: grid-footer-facebook;
+    }
     
-//     .grid-footer-email {
-//         display: grid;
-//         grid-area: grid-footer-email;
-//     }
+    .grid-footer-email {
+        display: grid;
+        grid-area: grid-footer-email;
+    }
 
-//     .footerSocial {
-//         margin: 0rem;
-//     }
-// }
+    .footerSocial {
+        margin: 0rem;
+    }
+}
 
-// @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
 
-//     .grid-footer {
-//         align-items: center;        
-//         column-gap: $spacing-xl;
-//         display: grid;
-//         grid-area: grid-footer;
-//         grid-template-areas: 
-//         "grid-footer-logo"
-//         "grid-footer-instagram"
-//         "grid-footer-youtube"
-//         "grid-footer-facebook"
-//         "grid-footer-email";
-//         justify-content: center;
-//         padding-bottom: $spacing-xl;
-//         width: 100%;
-//     }
+    .grid-footer {
+        align-items: center;        
+        column-gap: $spacing-xl;
+        display: grid;
+        grid-area: grid-footer;
+        grid-template-areas: 
+        "grid-footer-logo"
+        "grid-footer-instagram"
+        "grid-footer-youtube"
+        "grid-footer-facebook"
+        "grid-footer-email";
+        justify-content: center;
+        padding-bottom: $spacing-xl;
+        width: 100%;
+    }
 
-//     .footerSocial {
-//         margin: 0rem;
-//     }
-// }
-// /* FIN MEDIAS FOOTER */
+    .footerSocial {
+        margin: 0rem;
+    }
+}
+/* FIN MEDIAS FOOTER */

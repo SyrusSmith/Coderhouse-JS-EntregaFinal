@@ -2,7 +2,7 @@
 /* IMPORTS */
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 /* VARIABLES */
-/* FONTS SIZE */
+/* FONTS */
 /* SPACINGS */
 /* COLORS */
 /* GLOBALS */
@@ -16,28 +16,26 @@
 
 html {
   font-size: 62.5%;
-  /*62.5% Para que el tamaño de la fuente base sea 10px*/
+  /* 62.5% Para que el tamaño de la fuente base sea 10px*/
   height: 100%;
   text-decoration: none; }
 
 body {
   background-color: #f5f5f5;
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: auto;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   min-width: 100%;
   width: 100%; }
+
+:root {
+  --bs-body-line-height: 1; }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0rem; }
 
 ol, ul {
   padding-left: 0rem; }
-
-li {
-  list-style: none; }
 
 h1 {
   display: none; }
@@ -53,29 +51,34 @@ p {
   margin: 0; }
 
 main {
-  display: grid;
-  justify-content: center; }
-
-button {
-  border: none;
-  text-decoration: none; }
-
-input {
-  border: none; }
-
-table thead tbody tr th td {
-  border: none;
-  border-style: none;
-  border-collapse: collapse; }
-
-thead > tr > th {
-  height: 1rem; }
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 18rem 0rem 4rem; }
 
 td {
   text-align: center; }
 
 /* --> FIN CSS NORMALIZE <-- */
 /* INICIO MEDIAS NORMALIZE */
+@media only screen and (max-width: 1024px) {
+  .grid-container {
+    display: grid;
+    align-content: center;
+    gap: 2rem;
+    grid-template-areas: "grid-header" "grid-main" "grid-footer";
+    justify-content: center;
+    max-width: 100vw;
+    width: 100%; }
+  main {
+    padding: 18rem 0rem 2rem; } }
+
+@media only screen and (max-width: 600px) {
+  main {
+    padding: 14rem 0rem 2rem; }
+  .grid-container {
+    justify-content: center; } }
+
 /* FIN MEDIAS NORMALIZE */
 /* PARTIALS */
 /* --> INICIO CSS HEADER <--- */
@@ -127,11 +130,13 @@ header {
 
 /* CLASES MENU */
 .menu {
+  align-items: center;
   display: flex;
   font-size: 1.5em;
   font-weight: 900;
   margin-bottom: 0rem; }
   .menu .botonesMenu {
+    height: 3.1rem;
     padding: 0.5rem 1rem; }
   .menu .botonesMenu:hover {
     background-color: #337dff; }
@@ -230,8 +235,7 @@ footer {
   background-color: #cccccc;
   bottom: 0;
   /* Para que el footer quede pegado abajo */
-  display: grid;
-  height: 30rem;
+  display: flex;
   justify-content: center;
   position: relative;
   /* Para que el footer quede pegado abajo */
@@ -246,7 +250,8 @@ footer {
   .CONTACTO__FORM__INPUT {
     padding: 1rem 0; }
   .CONTACTO__FORM__INPUT > input {
-    border-radius: .35rem;
+    border: 0.2rem solid #CCCCCC;
+    border-radius: .75rem;
     height: 3rem;
     padding-left: 1rem;
     width: 35rem; }
@@ -302,13 +307,910 @@ footer {
       position: relative;
       text-align: center; }
 
+.footerLogo {
+  max-height: 10rem;
+  padding: 2rem 0rem; }
+
+.footerSocial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem; }
+  .footerSocial a {
+    align-items: center;
+    display: flex;
+    padding: 1.5rem; }
+  .footerSocial .footerIconoInstagram {
+    background-color: #b4b4b4;
+    background-image: url("../media/icons/Instagram-gris.svg");
+    border-radius: 0.5rem;
+    height: 30px;
+    width: 30px;
+    overflow: hidden; }
+  .footerSocial .footerIconoYoutube {
+    background-color: #b4b4b4;
+    background-image: url("../media/icons/Youtube-gris.svg");
+    border-radius: 0.5rem;
+    height: 30px;
+    width: 30px;
+    overflow: hidden; }
+  .footerSocial .footerIconoFacebook {
+    background-color: #b4b4b4;
+    background-image: url("../media/icons/Facebook-gris.svg");
+    border-radius: 0.5rem;
+    height: 30px;
+    width: 30px;
+    overflow: hidden; }
+  .footerSocial .footerIconoMail {
+    background-color: #b4b4b4;
+    background-image: url("../media/icons/Mail-gris.svg");
+    border-radius: 0.5rem;
+    height: 30px;
+    width: 30px;
+    overflow: hidden; }
+
+.footerEtiquetaSocial {
+  color: #505050;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.5rem; }
+
+@keyframes bump {
+  33% {
+    transform: scale(1.8); }
+  66% {
+    transform: scale(0.8); }
+  100% {
+    transform: scale(1); } }
+
+.footerSocial:hover {
+  background-color: rgba(0, 110, 255, 0.3);
+  transform: scale(1.1); }
+  .footerSocial:hover .footerIconoInstagram {
+    animation: bump 0.5s ease-in-out;
+    background-image: url("../media/icons/Instagram.svg");
+    overflow: hidden; }
+  .footerSocial:hover .footerIconoYoutube {
+    animation: bump 0.5s ease-in-out;
+    background-image: url("../media/icons/Youtube.svg");
+    overflow: hidden; }
+  .footerSocial:hover .footerIconoFacebook {
+    animation: bump 0.5s ease-in-out;
+    background-image: url("../media/icons/Facebook.svg");
+    overflow: hidden; }
+  .footerSocial:hover .footerIconoMail {
+    animation: bump 0.5s ease-in-out;
+    background-image: url("../media/icons/Mail.svg");
+    overflow: hidden; }
+  .footerSocial:hover .footerEtiquetaSocial {
+    color: white; }
+
+/* --> FIN CSS FOOTER <-- */
+/* INICIO MEDIAS FOOTER */
+@media only screen and (max-width: 1024px) {
+  .grid-footer {
+    align-items: center;
+    column-gap: 0rem;
+    display: grid;
+    grid-area: grid-footer;
+    grid-template-areas: "grid-footer-logo grid-footer-instagram grid-footer-youtube" "grid-footer-logo grid-footer-facebook grid-footer-email";
+    justify-content: center;
+    padding: 2rem;
+    position: relative; }
+  .grid-footer-logo {
+    display: grid;
+    grid-area: grid-footer-logo; }
+  .grid-footer-instagram {
+    display: grid;
+    grid-area: grid-footer-instagram; }
+  .grid-footer-youtube {
+    display: grid;
+    grid-area: grid-footer-youtube; }
+  .grid-footer-facebook {
+    display: grid;
+    grid-area: grid-footer-facebook; }
+  .grid-footer-email {
+    display: grid;
+    grid-area: grid-footer-email; }
+  .footerSocial {
+    margin: 0rem; } }
+
+@media only screen and (max-width: 600px) {
+  .grid-footer {
+    align-items: center;
+    column-gap: 2rem;
+    display: grid;
+    grid-area: grid-footer;
+    grid-template-areas: "grid-footer-logo" "grid-footer-instagram" "grid-footer-youtube" "grid-footer-facebook" "grid-footer-email";
+    justify-content: center;
+    padding-bottom: 2rem;
+    width: 100%; }
+  .footerSocial {
+    margin: 0rem; } }
+
+/* FIN MEDIAS FOOTER */
 /* PAGES */
+/* INICIO CLASES INDEX.html*/
+/* Clases Carrousel */
+.carrousel {
+  display: flex;
+  max-height: 70vh;
+  position: relative;
+  width: 100%; }
+  .carrousel .carrouselImg {
+    display: flex;
+    height: 75vh;
+    width: 100%; }
+  .carrousel .carrouselTexto {
+    background-image: linear-gradient(to bottom, rgba(0, 29, 77, 0.01), rgba(0, 29, 77, 0.7), rgba(0, 29, 77, 0.9));
+    bottom: 0.1em;
+    position: absolute;
+    width: 100%; }
+    .carrousel .carrouselTexto .carrouselVolanta {
+      color: #337dff;
+      font-size: 1.5rem;
+      font-weight: 500;
+      font-style: italic;
+      padding-left: 4rem; }
+    .carrousel .carrouselTexto .carrouselH2 {
+      color: white;
+      display: flex;
+      font-size: 4rem;
+      font-weight: 900;
+      justify-content: flex-start;
+      padding: 1rem 4rem 0rem;
+      text-align: left;
+      text-shadow: 0.25rem 0.25rem 0.25rem rgba(100, 100, 100, 0.5); }
+    .carrousel .carrouselTexto .carrouselVolantaMobile {
+      display: none; }
+    .carrousel .carrouselTexto .carrouselP {
+      color: gainsboro;
+      display: flex;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.4;
+      padding: 2rem 4rem 4rem;
+      width: 100%; }
+
+.carrousel:hover {
+  box-shadow: 0rem 0rem 10rem rgba(80, 80, 80, 0.5);
+  transform: scale(1.02, 1.02); }
+  .carrousel:hover .carrouselImg {
+    transform: scale(1.02, 1.02); }
+  .carrousel:hover .carrouselTexto {
+    background-image: linear-gradient(to bottom, rgba(0, 110, 205, 0.01), rgba(0, 110, 205, 0.8), rgba(0, 110, 205, 0.7));
+    transform: scale(1.02, 1.08); }
+  .carrousel:hover .carrouselH2 {
+    text-shadow: 0.25rem 0.25rem 0.25rem rgba(150, 150, 150, 0.5); }
+
+/* Clases Notas Terciarias */
+.TERCIARIAS {
+  background-color: #e6e6e6;
+  display: flex;
+  margin: 4rem 0rem;
+  max-width: 120rem; }
+  .TERCIARIAS__NOTA {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 22%;
+    padding: 2rem;
+    width: 20%; }
+    .TERCIARIAS__NOTA__VOLANTA {
+      color: #337dff;
+      font-size: 1.5rem;
+      font-weight: 300; }
+    .TERCIARIAS__NOTA__IMG {
+      max-width: 100%;
+      padding-top: 1rem; }
+    .TERCIARIAS__NOTA__TITULO {
+      color: #505050;
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding-top: 0.5rem; }
+    .TERCIARIAS__NOTA:hover {
+      background-color: rgba(0, 110, 255, 0.25);
+      padding: 1rem; }
+    .TERCIARIAS__NOTA:hover .TERCIARIAS__NOTA__VOLANTA {
+      font-weight: 700; }
+    .TERCIARIAS__NOTA:hover .TERCIARIAS__NOTA__TITULO {
+      font-weight: 700; }
+
+/* Clases Notas Secundarias */
+.sectionNotasSecundarias {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 120rem;
+  width: 90%; }
+  .sectionNotasSecundarias > article {
+    background-color: #cccccc;
+    margin: 1rem 0rem; }
+    .sectionNotasSecundarias > article .notasSecundarias {
+      display: flex;
+      justify-content: center;
+      width: 100%; }
+      .sectionNotasSecundarias > article .notasSecundarias img {
+        height: 202.5px;
+        max-width: 30%;
+        width: 360px; }
+      .sectionNotasSecundarias > article .notasSecundarias .notasSecundariasTexto {
+        padding: 2rem 2rem 0rem; }
+        .sectionNotasSecundarias > article .notasSecundarias .notasSecundariasTexto h3 {
+          color: #337dff;
+          font-size: 2.5rem;
+          font-weight: 700;
+          padding-top: 1rem; }
+        .sectionNotasSecundarias > article .notasSecundarias .notasSecundariasTexto p {
+          color: #505050;
+          font-size: 1.8rem;
+          line-height: 1.2;
+          padding: 2rem 0rem; }
+        .sectionNotasSecundarias > article .notasSecundarias .notasSecundariasTexto .notasSecundariasVolanta {
+          color: #282828;
+          font-size: 1.5rem;
+          font-weight: 300; }
+    .sectionNotasSecundarias > article:hover {
+      transform: scale(1.02, 1.02); }
+      .sectionNotasSecundarias > article:hover .notasSecundarias {
+        background-color: rgba(0, 110, 255, 0.25); }
+        .sectionNotasSecundarias > article:hover .notasSecundarias .notasSecundariasTexto h3 {
+          color: white; }
+        .sectionNotasSecundarias > article:hover .notasSecundarias .notasSecundariasVolanta {
+          font-weight: 700; }
+
+/* FIN clases index.html */
+/* INICIO MEDIAS INDEX.HTML */
+@media only screen and (max-width: 1024px) {
+  .container {
+    max-width: 90vw; }
+  /* Clases Carrousel */
+  .carrousel {
+    height: 100vh;
+    max-width: 90vw; }
+    .carrousel .carrouselImg {
+      width: 100%; }
+    .carrousel .carrouselTexto {
+      position: absolute;
+      padding-bottom: 2.5rem;
+      width: 100%; }
+      .carrousel .carrouselTexto .carrouselH2 {
+        padding: 1rem 2.5rem 0rem; }
+      .carrousel .carrouselTexto .carrouselVolanta {
+        padding-left: 2.5rem; }
+      .carrousel .carrouselTexto .carrouselP {
+        color: white;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+        line-height: 1.4;
+        padding: 1.5rem 2rem; }
+  .carrousel:hover {
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(80, 80, 80, 0.5);
+    width: 100%; }
+    .carrousel:hover .carrouselImg {
+      width: 100%; }
+    .carrousel:hover .carrouselTexto {
+      width: 100%; }
+  /* Clases Notas Terciarias */
+  .sectionNotasTerciarias {
+    max-width: 100%;
+    padding: 2rem 4rem; }
+    .sectionNotasTerciarias .notasTerciarias {
+      padding: 1rem; }
+  /* Clases Notas Secundarias */
+  .sectionNotasSecundarias {
+    max-width: 80vw; }
+    .sectionNotasSecundarias > article {
+      margin: 0rem; }
+      .sectionNotasSecundarias > article .notasSecundarias {
+        align-items: center;
+        flex-direction: column;
+        width: 100%; }
+        .sectionNotasSecundarias > article .notasSecundarias img {
+          height: auto;
+          max-width: 100%;
+          width: 100%; }
+        .sectionNotasSecundarias > article .notasSecundarias .notasSecundariasTexto {
+          max-width: 100%; }
+          .sectionNotasSecundarias > article .notasSecundarias .notasSecundariasTexto h3 {
+            font-size: 2rem; }
+          .sectionNotasSecundarias > article .notasSecundarias .notasSecundariasTexto p {
+            font-size: 1.5rem; } }
+
+@media only screen and (max-width: 700px) {
+  .container {
+    max-width: 100%;
+    padding: 0rem 4rem;
+    width: 100vw; }
+  .carrousel {
+    height: 100%;
+    max-width: 100%;
+    position: relative;
+    max-height: 120vh; }
+    .carrousel .carousel-indicators {
+      /* CLASE BOOTSTRAP */
+      margin-bottom: 0rem; }
+    .carrousel .carrouselImg {
+      display: flex;
+      width: 100%; }
+    .carrousel .carrouselTexto {
+      background-color: rgba(0, 110, 205, 0.5);
+      position: relative;
+      width: 100%; }
+      .carrousel .carrouselTexto .carrouselVolanta {
+        display: none; }
+      .carrousel .carrouselTexto .carrouselH2 {
+        color: white;
+        font-size: 2.5rem;
+        padding: 1rem 6rem 2rem; }
+      .carrousel .carrouselTexto .carrouselVolantaMobile {
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-style: italic;
+        display: none;
+        padding: 0rem 6rem 1rem; }
+      .carrousel .carrouselTexto .carrouselP {
+        color: gainsboro;
+        display: none;
+        font-size: 1.5rem;
+        padding: 0rem 6rem 0rem; }
+  .carrousel:hover {
+    width: 100%; }
+    .carrousel:hover .carrouselImg {
+      width: 100%; }
+    .carrousel:hover .carrouselTexto {
+      background-color: gainsboro;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.5));
+      padding-bottom: 1.5rem;
+      width: 100%; }
+      .carrousel:hover .carrouselTexto .carrouselH2 {
+        color: rgba(0, 110, 255, 0.7);
+        width: 100%; }
+      .carrousel:hover .carrouselTexto .carrouselP {
+        line-height: 1.2;
+        font-weight: 500; }
+  /* Clases Notas Terciarias */
+  .sectionNotasTerciarias {
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0rem;
+    max-width: 32rem; }
+    .sectionNotasTerciarias .notasTerciarias {
+      max-width: 90%;
+      width: 90%; }
+  .notasTerciarias:hover {
+    width: 90%; } }
+
+@media only screen and (max-width: 440px) {
+  .carrousel {
+    height: 100%;
+    max-height: 120vh; }
+    .carrousel .carrouselTexto .carrouselH2 {
+      font-size: 2rem;
+      padding: 1rem 3.6rem 2rem; }
+    .carrousel .carrouselTexto .carrouselVolantaMobile {
+      display: none; }
+    .carrousel .carrouselTexto .carrouselP {
+      display: none; } }
+
+/* FIN MEDIAS INDEX.HTML */
+/* --> INICIO CLASES nosotros.html <-- */
+.nosotrosFooter {
+  position: absolute; }
+
+.mainNosotros {
+  flex-direction: row;
+  justify-content: center; }
+
+.nosotros {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  min-height: 66vh;
+  max-width: 60vw;
+  width: 100%; }
+  .nosotros .nosotrosTexto {
+    flex-direction: column;
+    max-width: 60%;
+    padding-left: 2rem; }
+    .nosotros .nosotrosTexto .nosotrosH2 {
+      color: #337dff;
+      font-size: 4rem;
+      font-weight: 700;
+      padding: 0rem 0rem 2rem;
+      width: 100%; }
+    .nosotros .nosotrosTexto .nosotrosP {
+      color: #505050;
+      font-size: 2rem;
+      line-height: 3rem;
+      padding: 1rem 0rem; }
+  .nosotros .nosotrosLogo {
+    display: flex;
+    max-width: 40%;
+    padding: 7rem 2rem; }
+    .nosotros .nosotrosLogo .nosotrosLogoImg {
+      box-shadow: 0rem 0rem 0.25rem #505050;
+      display: flex;
+      height: auto;
+      max-width: 100%;
+      width: 30rem; }
+
+/* FIN CLASES nosotros.html */
+/* MEDIA QUERIES nosotros.html*/
+@media only screen and (max-width: 1024px) {
+  .nosotros {
+    max-width: 90vw; }
+  .nosotrosFooter {
+    position: relative; } }
+
+@media only screen and (max-width: 600px) {
+  .nosotros {
+    align-items: center;
+    flex-direction: column;
+    max-width: 100vw;
+    width: 100%; }
+    .nosotros .nosotrosTexto {
+      max-width: 100%;
+      order: 2; }
+    .nosotros .nosotrosLogo {
+      order: 1;
+      max-width: 100%;
+      padding: 0rem 0rem 2rem; }
+  .nosotrosFooter {
+    position: relative; } }
+
+/* --> INICIO CLASES NOTICIAS.html <-- */
+.carrouselNoticias {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: auto;
+  margin-bottom: 2rem;
+  max-width: 1200px;
+  width: 100%; }
+
+/* Carrousel Nota Principal */
+.carrouselNotaPrincipal {
+  display: flex;
+  height: 660px;
+  max-width: 70%;
+  margin-right: 2rem;
+  position: relative;
+  width: 100%; }
+  .carrouselNotaPrincipal .carrouselLinkImg {
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden; }
+    .carrouselNotaPrincipal .carrouselLinkImg .carrouselNotaPrincipalImg {
+      display: flex;
+      margin-left: -20rem;
+      height: 660px; }
+    .carrouselNotaPrincipal .carrouselLinkImg .carrouselNotaPrincipalTexto {
+      background-image: linear-gradient(to bottom, rgba(0, 29, 77, 0.01), rgba(0, 29, 77, 0.7), rgba(0, 29, 77, 0.9));
+      bottom: 0.1em;
+      position: absolute;
+      width: 100%; }
+      .carrouselNotaPrincipal .carrouselLinkImg .carrouselNotaPrincipalTexto .carrouselVolantaPrincipal {
+        color: #337dff;
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-style: italic;
+        padding-left: 1.5rem; }
+      .carrouselNotaPrincipal .carrouselLinkImg .carrouselNotaPrincipalTexto .carrouselNotaPrincipalH2 {
+        color: white;
+        font-size: 3rem;
+        font-weight: 900;
+        padding: 1rem 1.5rem 0rem;
+        text-shadow: 0.25rem 0.25rem 0.5rem rgba(220, 220, 220, 0.5);
+        width: 100%; }
+      .carrouselNotaPrincipal .carrouselLinkImg .carrouselNotaPrincipalTexto .carrouselNotaPrincipalP {
+        color: gainsboro;
+        display: flex;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.5;
+        margin-bottom: 0rem;
+        padding: 1.5rem;
+        width: 100%; }
+
+.carrouselNotaPrincipal:hover {
+  box-shadow: 0rem 0rem 10rem rgba(80, 80, 80, 0.5);
+  transform: scale(1.02, 1.02); }
+  .carrouselNotaPrincipal:hover .carrouselNotaPrincipalTexto {
+    background-image: linear-gradient(to bottom, rgba(0, 110, 205, 0.01), rgba(0, 110, 205, 0.8), rgba(0, 110, 205, 0.7)); }
+    .carrouselNotaPrincipal:hover .carrouselNotaPrincipalTexto .carrouselVolantaPrincipal {
+      font-weight: 700; }
+    .carrouselNotaPrincipal:hover .carrouselNotaPrincipalTexto .carrouselNotaPrincipalH2 {
+      color: white; }
+    .carrouselNotaPrincipal:hover .carrouselNotaPrincipalTexto .carrouselNotaPrincipalP {
+      color: white; }
+
+/* Carrousel Notas Secundarias */
+.carrouselNotasSecundarias {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: 660px;
+  justify-content: space-between;
+  max-width: 30%;
+  position: relative;
+  width: 100%; }
+  .carrouselNotasSecundarias .carrouselNotasSecundariasImg {
+    display: flex;
+    max-width: 100%; }
+  .carrouselNotasSecundarias .carrouselNotasSecundariasTexto {
+    background-color: #646464;
+    bottom: 0.1em;
+    margin-top: -3rem;
+    padding-top: 1rem;
+    position: relative;
+    width: 100%; }
+    .carrouselNotasSecundarias .carrouselNotasSecundariasTexto .carrouselVolantaSecundarias {
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 500;
+      font-style: italic;
+      padding-left: 1.5rem; }
+    .carrouselNotasSecundarias .carrouselNotasSecundariasTexto .carrouselNotasSecundariasH2 {
+      color: #ebebeb;
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 1rem 1.25rem 0rem;
+      text-shadow: 0.25rem 0.25rem 0.25rem rgba(220, 220, 220, 0.25);
+      width: 100%; }
+    .carrouselNotasSecundarias .carrouselNotasSecundariasTexto .carrouselNotasSecundariasP {
+      color: gainsboro;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 1.2;
+      padding: 1rem 1.25rem 1.5rem;
+      width: 100%; }
+
+.carrouselNotasSecundariasMarginBottom {
+  margin-bottom: 0.5rem; }
+
+.carrouselNotasSecundariasMarginTop {
+  margin-top: 0.5rem; }
+
+.carrouselNotasSecundariasMarginBottom:hover, .carrouselNotasSecundariasMarginTop:hover {
+  transform: scale(1.02, 1.02); }
+  .carrouselNotasSecundariasMarginBottom:hover .carrouselNotasSecundariasTexto, .carrouselNotasSecundariasMarginTop:hover .carrouselNotasSecundariasTexto {
+    background-image: linear-gradient(to bottom, rgba(200, 200, 200, 0.8), rgba(200, 200, 200, 0.8)); }
+    .carrouselNotasSecundariasMarginBottom:hover .carrouselNotasSecundariasTexto .carrouselVolantaSecundarias, .carrouselNotasSecundariasMarginTop:hover .carrouselNotasSecundariasTexto .carrouselVolantaSecundarias {
+      font-weight: 700; }
+    .carrouselNotasSecundariasMarginBottom:hover .carrouselNotasSecundariasTexto .carrouselNotasSecundariasH2, .carrouselNotasSecundariasMarginTop:hover .carrouselNotasSecundariasTexto .carrouselNotasSecundariasH2 {
+      color: #337dff; }
+    .carrouselNotasSecundariasMarginBottom:hover .carrouselNotasSecundariasTexto .carrouselNotasSecundariasP, .carrouselNotasSecundariasMarginTop:hover .carrouselNotasSecundariasTexto .carrouselNotasSecundariasP {
+      color: white;
+      font-weight: 600;
+      line-height: 1.35; }
+
+/* FIN CLASES NOTICIAS.html */
+/* MEDIA QUERIES noticias.html */
+@media only screen and (max-width: 1024px) {
+  .carrouselNoticias {
+    max-width: 90vw; } }
+
+@media only screen and (max-width: 767px) {
+  .carrouselNoticias {
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 100vw;
+    margin-bottom: 2rem; }
+    .carrouselNoticias .carrouselNotaPrincipal {
+      max-width: 90%;
+      margin: 0rem; }
+      .carrouselNoticias .carrouselNotaPrincipal .carrouselLinkImg {
+        display: flex; }
+        .carrouselNoticias .carrouselNotaPrincipal .carrouselLinkImg .carrouselNotaPrincipalImg {
+          height: 100%; }
+    .carrouselNoticias .carrouselNotasSecundarias {
+      max-width: 90%; }
+  .noticiasSecundarias {
+    margin-top: 16rem; } }
+
+@media only screen and (max-width: 400px) {
+  .carrouselNoticias .carrouselNotaPrincipal {
+    height: 490px; }
+    .carrouselNoticias .carrouselNotaPrincipal .carrouselLinkImg {
+      height: 100%;
+      max-height: 325px; }
+      .carrouselNoticias .carrouselNotaPrincipal .carrouselLinkImg .carrouselNotaPrincipalTexto .carrouselNotaPrincipalH2 {
+        font-size: 2rem; }
+      .carrouselNoticias .carrouselNotaPrincipal .carrouselLinkImg .carrouselNotaPrincipalTexto .carrouselNotaPrincipalP {
+        font-size: 1.5rem;
+        line-height: 1.2;
+        padding-top: 1rem; }
+  .carrouselNoticias .carrouselNotasSecundarias {
+    margin-top: 2rem;
+    max-width: 90%; }
+  .noticiasSecundarias {
+    margin-top: 2rem; } }
+
+/*FIN MEDIAS noticias.html*/
+/* --> INICIO CLASES reviews.html <-- */
+.carrouselReviews {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: auto;
+  margin-bottom: 2rem;
+  max-width: 1200px;
+  width: 100%; }
+
+/* Carrousel Review Principal */
+.carrouselReviewPrincipal {
+  display: flex;
+  height: 660px;
+  max-width: 70%;
+  margin-right: 2rem;
+  position: relative;
+  width: 100%; }
+  .carrouselReviewPrincipal .carrouselLinkImg {
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden; }
+    .carrouselReviewPrincipal .carrouselLinkImg .carrouselReviewPrincipalImg {
+      display: flex;
+      margin-left: -10rem;
+      height: 660px; }
+    .carrouselReviewPrincipal .carrouselLinkImg .carrouselReviewPrincipalTexto {
+      background-image: linear-gradient(to bottom, rgba(0, 29, 77, 0.01), rgba(0, 29, 77, 0.7), rgba(0, 29, 77, 0.9));
+      bottom: 0.1em;
+      position: absolute;
+      width: 100%; }
+      .carrouselReviewPrincipal .carrouselLinkImg .carrouselReviewPrincipalTexto .carrouselVolantaPrincipal {
+        color: #337dff;
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-style: italic;
+        padding-left: 1.5rem; }
+      .carrouselReviewPrincipal .carrouselLinkImg .carrouselReviewPrincipalTexto .carrouselReviewPrincipalH2 {
+        color: white;
+        font-size: 3rem;
+        font-weight: 900;
+        padding: 1rem 1.5rem 0rem;
+        text-shadow: 0.25rem 0.25rem 0.25rem rgba(220, 220, 220, 0.5);
+        width: 100%; }
+      .carrouselReviewPrincipal .carrouselLinkImg .carrouselReviewPrincipalTexto .carrouselReviewPrincipalP {
+        color: gainsboro;
+        display: flex;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.5;
+        margin-bottom: 0rem;
+        padding: 1.5rem;
+        width: 100%; }
+
+.carrouselReviewPrincipal:hover {
+  box-shadow: 0rem 0rem 10rem rgba(80, 80, 80, 0.5);
+  transform: scale(1.02, 1.02);
+  /* .carrouselLinkImg {
+    transform: scale(1.02, 1.02);
+    } */ }
+  .carrouselReviewPrincipal:hover .carrouselReviewPrincipalTexto {
+    background-image: linear-gradient(to bottom, rgba(0, 110, 205, 0.01), rgba(0, 110, 205, 0.8), rgba(0, 110, 205, 0.7)); }
+    .carrouselReviewPrincipal:hover .carrouselReviewPrincipalTexto .carrouselVolantaPrincipal {
+      font-weight: 700; }
+    .carrouselReviewPrincipal:hover .carrouselReviewPrincipalTexto .carrouselReviewPrincipalH2 {
+      color: white; }
+    .carrouselReviewPrincipal:hover .carrouselReviewPrincipalTexto .carrouselReviewPrincipalP {
+      color: white; }
+
+/* Carrousel Reviews Secundarias */
+.carrouselReviewsSecundarias {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: 660px;
+  justify-content: space-between;
+  max-width: 30%;
+  position: relative;
+  width: 100%; }
+  .carrouselReviewsSecundarias .carrouselReviewsSecundariasImg {
+    display: flex;
+    max-width: 100%; }
+  .carrouselReviewsSecundarias .carrouselReviewsSecundariasTexto {
+    background-color: #646464;
+    bottom: 0.1em;
+    margin-top: -3rem;
+    padding-top: 1rem;
+    position: relative;
+    width: 100%; }
+    .carrouselReviewsSecundarias .carrouselReviewsSecundariasTexto .carrouselVolantaSecundarias {
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 500;
+      font-style: italic;
+      padding-left: 1.5rem; }
+    .carrouselReviewsSecundarias .carrouselReviewsSecundariasTexto .carrouselReviewsSecundariasH2 {
+      color: #ebebeb;
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 1rem 1.25rem 0rem;
+      text-shadow: 0.25rem 0.25rem 0.25rem rgba(220, 220, 220, 0.25);
+      width: 100%; }
+    .carrouselReviewsSecundarias .carrouselReviewsSecundariasTexto .carrouselReviewsSecundariasP {
+      color: gainsboro;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 1.2;
+      padding: 1rem 1.25rem 1.5rem;
+      width: 100%; }
+
+.carrouselReviewsSecundariasMarginBottom {
+  margin-bottom: 0.5rem; }
+
+.carrouselReviewsSecundariasMarginTop {
+  margin-top: 0.5rem; }
+
+.carrouselReviewsSecundariasMarginBottom:hover, .carrouselReviewsSecundariasMarginTop:hover {
+  transform: scale(1.02, 1.02); }
+  .carrouselReviewsSecundariasMarginBottom:hover .carrouselReviewsSecundariasTexto, .carrouselReviewsSecundariasMarginTop:hover .carrouselReviewsSecundariasTexto {
+    background-image: linear-gradient(to bottom, rgba(200, 200, 200, 0.8), rgba(200, 200, 200, 0.8)); }
+    .carrouselReviewsSecundariasMarginBottom:hover .carrouselReviewsSecundariasTexto .carrouselVolantaSecundarias, .carrouselReviewsSecundariasMarginTop:hover .carrouselReviewsSecundariasTexto .carrouselVolantaSecundarias {
+      font-weight: 700; }
+    .carrouselReviewsSecundariasMarginBottom:hover .carrouselReviewsSecundariasTexto .carrouselReviewsSecundariasH2, .carrouselReviewsSecundariasMarginTop:hover .carrouselReviewsSecundariasTexto .carrouselReviewsSecundariasH2 {
+      color: #337dff; }
+    .carrouselReviewsSecundariasMarginBottom:hover .carrouselReviewsSecundariasTexto .carrouselReviewsSecundariasP, .carrouselReviewsSecundariasMarginTop:hover .carrouselReviewsSecundariasTexto .carrouselReviewsSecundariasP {
+      color: white;
+      font-weight: 600;
+      line-height: 1.35; }
+
+/* FIN CLASES reviews.html */
+/* MEDIA QUERIES reviews.html */
+@media only screen and (max-width: 1024px) {
+  .carrouselReviews {
+    max-width: 90vw; } }
+
+@media only screen and (max-width: 767px) {
+  .carrouselReviews {
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 100vw;
+    margin-bottom: 2rem; }
+    .carrouselReviews .carrouselReviewPrincipal {
+      max-width: 90%;
+      margin: 0rem; }
+      .carrouselReviews .carrouselReviewPrincipal .carrouselLinkImg {
+        display: flex; }
+        .carrouselReviews .carrouselReviewPrincipal .carrouselLinkImg .carrouselReviewPrincipalImg {
+          height: 100%; }
+    .carrouselReviews .carrouselReviewsSecundarias {
+      max-width: 90%; }
+  .reviewsSecundarias {
+    margin-top: 16rem; } }
+
+@media only screen and (max-width: 400px) {
+  .carrouselReviews .carrouselReviewPrincipal {
+    height: 490px; }
+    .carrouselReviews .carrouselReviewPrincipal .carrouselLinkImg {
+      height: 100%;
+      max-height: 325px; }
+      .carrouselReviews .carrouselReviewPrincipal .carrouselLinkImg .carrouselReviewPrincipalTexto .carrouselReviewPrincipalH2 {
+        font-size: 2rem; }
+      .carrouselReviews .carrouselReviewPrincipal .carrouselLinkImg .carrouselReviewPrincipalTexto .carrouselReviewPrincipalP {
+        font-size: 1.5rem;
+        line-height: 1.2;
+        padding-top: 1rem; }
+  .carrouselReviews .carrouselReviewsSecundarias {
+    margin-top: 2rem;
+    max-width: 90%; }
+  .reviewsSecundarias {
+    margin-top: 2rem; } }
+
+/*FIN MEDIAS reviews.html*/
+/* --> INICIO CLASES unitenos.html <-- */
+.terminosCondiciones {
+  color: #337dff;
+  font-size: 1.5rem; }
+
+.containerUnitenos {
+  height: 980px;
+  justify-content: center;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 1200px;
+  width: 100%; }
+
+/* INICIO Clases Bootstrap Modificadas */
+.form-check-input {
+  height: 1.5rem;
+  width: 1.5rem; }
+
+.btn-dark {
+  color: white;
+  background-color: #646464; }
+
+.btn-dark:hover {
+  color: white;
+  background-color: #337dff;
+  border-color: #282828;
+  font-size: 1.5rem;
+  font-weight: 700; }
+
+.btn-lg {
+  border-radius: 0.25rem;
+  font-size: 1.5rem;
+  height: 5rem;
+  width: 10rem; }
+
+/* FIN Clases Bootstrap Modificadas */
+/* MEDIAS unitenos.html*/
+@media only screen and (max-width: 1024px) {
+  .containerUnitenos {
+    padding: 16rem 4rem 2rem; }
+  .bootstrapOverride {
+    display: flex;
+    justify-content: center; } }
+
+@media only screen and (max-width: 600px) {
+  .containerUnitenos {
+    padding: 14rem 4rem 2rem; }
+  .bootstrapOverride {
+    display: flex;
+    justify-content: center; } }
+
+/* FIN CLASES unitenos.html */
+/* INICIO CLASES 404.html */
+.containerNotFound {
+  height: 100vh; }
+
+.notFound {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin-top: -3rem;
+  min-width: 98vw; }
+  .notFound__H1 {
+    display: block;
+    color: #337dff;
+    font-size: 5rem;
+    font-weight: 900; }
+  .notFound__H2 {
+    color: #969696;
+    font-size: 2.5rem;
+    font-weight: 700; }
+  .notFound__H3 {
+    color: #969696;
+    font-size: 2rem;
+    font-weight: 500;
+    font-style: italic; }
+  .notFound__img {
+    height: 30rem;
+    width: 30rem; }
+
+.footer404 {
+  position: absolute; }
+
+/* FIN CLASES 404.html */
+/* INICIO MEDIAS 404.html */
+@media only screen and (max-width: 1024px) {
+  .container {
+    height: 90vh; } }
+
+@media only screen and (max-width: 640px) {
+  .container {
+    padding: 40rem 4rem 20rem; }
+  .footer404 {
+    position: relative; } }
+
 /* INICIO CLASES TIENDA */
-main {
+.bodyTienda {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr auto; }
+
+.mainTienda {
+  align-items: flex-start;
   display: grid;
   grid-template-areas: 'productos productos productos productos filtros' 'cargarProductos cargarProductos cargarProductos cargarProductos cargarProductos';
   justify-content: center;
-  margin-top: 20rem;
   max-width: 1280rem;
   padding-bottom: 8rem; }
 
@@ -460,7 +1362,7 @@ main {
   background-color: #e6e6e6;
   border-radius: .5rem;
   box-shadow: 0rem 0rem 1rem 0.25rem rgba(140, 180, 255, 0.5);
-  width: 1280px; }
+  width: 128rem; }
 
 thead {
   background-color: #337dff;
@@ -487,8 +1389,13 @@ td {
   td img {
     width: 10rem; }
 
-.btnEliminarProducto, .btnVaciarCarrito {
-  background-color: #fc8989;
+.buttons {
+  padding-right: 1rem;
+  text-align: end; }
+
+.btnComprarCarrito, .btnEliminarProducto, .btnVaciarCarrito {
+  background-color: gainsboro;
+  border: solid 0.25rem #fc8989;
   border-radius: .5rem;
   color: #323232;
   font-size: 1.5rem;
@@ -497,7 +1404,7 @@ td {
   letter-spacing: .15rem;
   transition: all 0.25s ease-in-out;
   width: 10rem; }
-  .btnEliminarProducto:hover, .btnVaciarCarrito:hover {
+  .btnComprarCarrito:hover, .btnEliminarProducto:hover, .btnVaciarCarrito:hover {
     background-color: #ff6464;
     border: solid 0.1rem #c8c8c8;
     border-radius: 1rem;
@@ -506,6 +1413,16 @@ td {
     cursor: pointer;
     font-size: 1.5rem;
     translate: 0 -0.15rem; }
+
+.btnComprarCarrito {
+  background-color: #61ff6f;
+  border: none;
+  font-weight: 900;
+  height: 3.5rem;
+  margin-left: 1rem;
+  width: 15rem; }
+  .btnComprarCarrito:hover {
+    background-color: #389740; }
 
 .btnVaciarCarrito {
   height: 3.5rem;
@@ -523,3 +1440,42 @@ td {
   font-style: italic;
   padding-right: 2rem;
   text-align: end; }
+
+.MODAL {
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; }
+  .MODAL__CONTENT {
+    background-color: #fefefe;
+    border: 1px solid #888;
+    margin: 15% auto;
+    padding: 2rem;
+    width: 40%; }
+    .MODAL__CONTENT p {
+      font-weight: 700;
+      font-size: 2rem;
+      padding: 2rem;
+      text-align: center; }
+    .MODAL__CONTENT__MESSAGE {
+      color: #337dff; }
+    .MODAL__CONTENT__CLOSE {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      height: 3rem;
+      margin-bottom: 1rem;
+      width: 3rem; }
+      .MODAL__CONTENT__CLOSE p {
+        padding: 0; }
+      .MODAL__CONTENT__CLOSE:hover, .MODAL__CONTENT__CLOSE :focus {
+        color: #ff6464;
+        text-decoration: none;
+        cursor: pointer; }

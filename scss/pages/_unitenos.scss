@@ -1,0 +1,67 @@
+/* --> INICIO CLASES unitenos.html <-- */
+.terminosCondiciones {
+    color: #337dff;
+    font-size: 1.5rem;
+}
+
+.containerUnitenos {
+    height: 980px;
+    justify-content: center;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 1200px;
+    width: 100%;
+       
+}
+
+/* INICIO Clases Bootstrap Modificadas */
+.form-check-input {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.btn-dark {
+    color: white;
+    background-color: rgb(100, 100, 100);
+}
+.btn-dark:hover {
+    color: white;
+    background-color: #337dff;
+    border-color: rgb(40, 40, 40);
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+.btn-lg {
+    border-radius: 0.25rem;
+    font-size: 1.5rem;
+    height: 5rem;
+    width: 10rem;
+}
+/* FIN Clases Bootstrap Modificadas */
+
+/* MEDIAS unitenos.html*/
+@media only screen and (max-width: 1024px) {
+
+    .containerUnitenos {
+        padding: $spacing-xl*8 $spacing-xl*2 $spacing-xl;
+    }
+
+    .bootstrapOverride {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .containerUnitenos {
+        padding: $spacing-xl*7 $spacing-xl*2 $spacing-xl;
+    }
+
+    .bootstrapOverride {
+        display: flex;
+        justify-content: center;
+    }
+}
+/* FIN CLASES unitenos.html */
